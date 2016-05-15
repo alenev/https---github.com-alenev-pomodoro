@@ -1,0 +1,115 @@
+/*------------------------------------------------------------------------------------
+    info@asvgraf.ru; web-engineering, design, front-end: Anna Sudarikova
+	------------------------------------------------------------------------------------*/
+	/*	-webkit-opacity: 0.5; -moz-opacity: 0.5; -ms-opacity: 0.5; -o-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity=50);*/
+
+/* кнопки в формах */	
+	
+.bt-base,
+input.bt-base,
+a.bt-base,
+.bt-mid,
+input.bt-mid,
+a.bt-mid,
+.bt-small,
+input.bt-small,
+a.bt-small {
+		-webkit-transition: all 0.35s ease-out; -moz-transition: all 0.35s ease-out; -ms-transition: all 0.35s ease-out; -o-transition: all 0.35s ease-out;	
+	transition: all 0.35s ease-out;	
+}
+
+/* все кнопки в шапке */
+
+a.geo-change,
+a.header-recall,
+a.header-basket {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;	
+}
+
+/* основное меню */
+
+ul.menu-base a {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+ul.menu-base ul a {
+		-webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none;	
+	transition: none;
+} 
+
+/* соцсети в футере */
+
+ul.menu-socseti a {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+ul.menu-socseti a:hover {
+		-webkit-opacity: 0.8; -moz-opacity: 0.8; -ms-opacity: 0.8; -o-opacity: 0.8;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+/* блок "в корзину" с кнопками */
+
+.tocart-pult a.tocart-up,
+.tocart-pult a.tocart-down,
+.bt-tocart,
+input.bt-tocart,
+a.bt-tocart {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+/* категории меню */
+
+a.mc-item .mc-title {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+/* товары и акции */
+
+a.ip-middle .ip-title,
+a.ip-middle .ip-sostav {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+a.ia-middle .ia-title,
+a.ia-middle .ia-desc {
+		-webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out;	
+	transition: all 0.25s ease-out;
+}
+
+/* кнопки выбора города */
+
+dl.pomodoro-region a {
+	-webkit-transition: all 0.15s ease-out; -moz-transition: all 0.15s ease-out; -ms-transition: all 0.15s ease-out; -o-transition: all 0.15s ease-out;	
+	transition: all 0.15s ease-out;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

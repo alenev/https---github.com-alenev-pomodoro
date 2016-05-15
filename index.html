@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="robots" content="ALL">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<link href="css/master.css" rel="stylesheet" media="all">
+		<link href="css/print.css" rel="stylesheet" media="print">		
+
+		<!--jquery-->
+		<script src="js/jquery-1.12.0.min.js"></script>		
+		<!--end  jquery-->
+
+		<!-- 05 2016  -->
+		<script src="js/jquery.cookie.js"></script>
+		<!-- END 05 2016  -->
+		
+		<script src="js/UI.js"></script>
+		
+		<!--beaverslider-->
+		<script src="plugins/beaverslider/beaverslider.js"></script>
+		<script src="plugins/beaverslider/beaverslider-effects.js"></script>
+			<script>
+			  $(function(){
+				var slider = new BeaverSlider({         
+				  structure: {
+					type: "slider",
+					container: {
+					  id: "beaverslider",
+					  width: 770,
+					  height: 410
+					},
+					controls: {
+						previewMode: false,
+						align: "center",
+						containerClass: "control-container-over",
+						elementClass: "control-element-over",
+						elementActiveClass: "control-element-active-over"
+					}
+				  },
+				  content: {
+					images: [
+						"i-all/slides/slide-1.jpg",
+						"i-all/slides/slide-2.jpg",
+						"i-all/slides/slide-3.jpg"
+					],
+					/* 05 2016 */
+					urls: [ 
+						"1.html",
+						"2.html",
+						"3.html"   
+					]
+				  },
+				  animation: {
+					//effects: effectSets["slider: fade"],
+					//effects: "nailsRight:1000:30:30",
+					effects: "slideRight:1000",
+					interval: 4000,
+					initialInterval: 4000,
+					waitAllImages: true
+				  }
+				});
+			  });
+			</script>
+		<!--end beaverslider-->
+
+		<!--scrolltotop-->
+		<script src="js/jquery.scrollToTop.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#toTop").scrollToTop(1000);
+			});
+		</script>
+		<!--end scrolltotop-->
+
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<!--google-yandex-verification-->
+		<meta name="yandex-verification" content="">
+		<meta name="google-site-verification" content="">
+		<!--end google-yandex-verification-->
+	</head>
+
+
+
+	<body>
+		<!--scroll-to-top-->
+		<a href="#top" id="toTop">&nbsp;</a>
+		<!--end scroll-to-top-->
+		
+		
+		<!--registration-wrapper-->
+		<div class="registration-wrapper">
+			<div class="registration">
+				<a href="http://sushidzen.ru/" class="button-sushi">Суши Дзен</a>
+				<!--ul class="menu-registration">
+					<li><a href="">Вход</a></li>
+					<li><a href="">Регистрация</a></li>
+				</ul-->
+				<div class="spaser"></div>	
+			</div>
+		</div>
+		<!--end registration-wrapper-->
+		
+		
+		<!--header-->
+		<div class="header">
+			<div class="menu-top-holder">
+				<ul class="menu-top">
+					<li><a href="">О компании</a></li>
+					<li><a href="">Вакансии</a></li>
+					<li><a href="">Франчайзинг</a></li>
+					<li><a href="">Аренда</a></li>
+					<li><a href="">Новости</a></li>
+					<li><a href="">Контроль качества</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+				<div class="spaser"></div>
+			</div>
+			
+			<!--header-l-->
+			<div class="header-l">
+				<a href="/">
+					<img src="i-base/logo-pomodoro.png" alt="Итальянская пицца на тонком тесте. Сеть пиццерий Помодоро" class="logo">
+				</a>	
+				<span class="header-companyname">Итальянская пицца на тонком тесте. Сеть пиццерий</span>
+			</div>
+			<!--end header-l-->
+			<!--header-r-->
+			<div class="header-r">
+				<!--header-col1-->
+				<div class="header-col1">
+					<div class="header-geo">
+						<span class="geo-name">Ваш город:</span>
+						<span class="geo-city">Железнодорожный</span>
+						<span class="geo-region">Московская обл.</span>						
+						<a href="" class="geo-change">Выбрать<br>другой город </a>
+					</div>
+				</div>
+				<!--end header-col1-->
+				<!--header-col2-->
+				<div class="header-col2">
+					<div class="header-tel">
+						<p>
+							+7 (499) 130-61-88
+							<span>Круглосуточно</span>
+						</p>
+						<p>
+							+7 (495) 374-65-22
+							<span>С 10:00 до 22:00</span>
+						</p>
+					</div>
+				</div>
+				<!--end header-col2-->
+				<!--header-col3-->
+				<div class="header-col3">
+					<a href="" class="header-recall">Обратный звонок</a>	
+					<a href="" class="header-basket">						
+						<dl>
+						  <dt>Кол-во:</dt>
+						   <dd class="basket-kolvo">6</dd>
+						  <dt>Сумма:</dt>
+						   <dd class="basket-sum">1 909</dd>
+						</dl>
+						<!--p>
+							Корзина пуста
+							<span>Сделать заказ!</span>
+						</p-->
+						<div class="spaser"></div>									
+					</a>
+				</div>
+				<!--end header-col3-->
+				<div class="spaser"></div>
+			</div>
+			<!--end header-r-->		
+			<div class="spaser"></div>
+		</div>
+		<!--end header-->
+		
+		
+		<!--showroom-wrapper-->
+		<div class="showroom-wrapper">
+			<!--showroom-->
+			<div class="showroom">
+			
+				<!--menu-base-holder-->
+				<div class="menu-base-holder">
+					<!--menu-base-->
+					<ul class="menu-base">
+						<li><a href="">Меню</a>
+							<ul>
+								<li><a href="">Пицца</a></li>
+								<li><a href="">Десерты и напитки</a></li>
+								<li><a href="">Закуски и соусы</a></li>
+								<li><a href="">Новинки</a></li>
+								<li><a href="">Хиты</a></li>
+							</ul>							
+						</li>
+						<li><a href="">Акции</a></li>
+						<li><a href="">Бонусы</a></li>
+						<li><a href="">Как заказать</a></li>
+						<li><a href="">Сеть пиццерий</a></li>
+					</ul>
+					<!--end menu-base-->
+					<div class="spaser"></div>
+				</div>
+				<!--end menu-base-holder-->
+				
+				<!--banner-holder-->
+				<div class="banner-holder">
+					<!--beaverslider-->
+					<div id="beaverslider"></div>
+					<!--end beaverslider-->
+				</div>
+				<!--end banner-holder-->
+				
+				<!--lovi-holder-->
+				<div class="lovi-holder">
+					<div class="lovi">
+						<div class="lovi-header">
+							<p>Лови момент!</p>
+						</div>
+						<div class="lovi-middle">
+							<img src="i-all/pizza-small/pizza-s-gribami-i-vetchinoi.png" alt="пицца с ветчиной и грибами">
+							<p class="lovi-title">
+								<span>Пицца</span>
+								с ветчиной и грибами
+							</p>
+						</div>
+<div class="lovi-footer add2cart_ui" data-id="3" data-sale="1">
+							<!--lovi-cena-->
+							<div class="lovi-cena">
+								<p class="lovi-cena-old">
+									2 259<span class="rouble"> Р</span>
+								</p>
+								<p class="lovi-cena-new">
+									<span data-base="1259" class="pv">1259</span><span class="rouble"> Р</span>
+								</p>
+								<div class="spaser"></div>
+							</div>
+							<!--end lovi-cena-->
+							<!--form-tocart-->
+							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-tocart" autocomplete="off">
+								<div class="tocart-pult">
+									<input name="" id="" class="tocart-qw" type="text" value="1">								
+									<a class="tocart-up">&#9650;</a>
+									<a class="tocart-down">&#9660;</a>
+								</div>
+								<input value="В&nbsp;корзину" class="bt-tocart" type="submit">
+							</form>
+							<!--end form-tocart-->
+							<p class="lovi-timeout">
+								До конца акции осталось:
+							</p>
+							<p class="lovi-timeout-date">
+								<span>01</span> день
+								<span>20</span> час
+								<span>59</span> мин
+							</p>
+</div>
+					</div>
+				</div>
+				<!--lovimoment-holder-->
+				
+				<div class="spaser"></div>
+				
+			</div>
+			<!--end showroom-->
+		</div>
+		<!--end showroom-wrapper-->
+		
+		
+		<!--menu-cat-wrapper-->
+		<div class="menu-cat-wrapper">
+			<div class="menu-cat-grandcolumn">
+				<h1><a href="">Меню</a></h1>
+				<!--menu-cat-->
+				<div class="menu-cat">
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-pizza.png" alt="Меню Помодоро Пицца">
+						<p class="mc-title">Пицца Помодоро</p>
+					</a>
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-coffee.png" alt="Меню Помодоро Десерты и напитки">
+						<p class="mc-title">Десерты и напитки</p>
+					</a>						
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-roll.png" alt="Меню Помодоро Закуски и соусы">
+						<p class="mc-title">Закуски и соусы</p>
+					</a>
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-new.png" alt="Меню Помодоро Пицца Новинки">
+						<p class="mc-title">Новинки</p>
+					</a>
+					
+					<div class="spaser"></div>
+					
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-pizza.png" alt="Меню Помодоро Пицца">
+						<p class="mc-title">Пицца Помодоро</p>
+					</a>
+					<a href="" class="mc-item">
+						<!--img-substitute-->
+						<p class="img-substitute">
+							Изображение<br>скоро будет добавлено
+						</p>
+						<!--end img-substitute-->
+						<p class="mc-title">Десерты и напитки</p>
+					</a>						
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-roll.png" alt="Меню Помодоро Закуски и соусы">
+						<p class="mc-title">Закуски и соусы Закуски и соусы Закуски и соусы</p>
+					</a>
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-new.png" alt="Меню Помодоро Пицца Новинки">
+						<p class="mc-title">Новинки</p>
+					</a>
+					
+					<div class="spaser"></div>
+					
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-pizza.png" alt="Меню Помодоро Пицца">
+						<p class="mc-title">Пицца Помодоро</p>
+					</a>
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-coffee.png" alt="Меню Помодоро Десерты и напитки">
+						<p class="mc-title">Десерты и напитки</p>
+					</a>						
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-roll.png" alt="Меню Помодоро Закуски и соусы">
+						<p class="mc-title">Закуски и соусы</p>
+					</a>
+					<a href="" class="mc-item">
+						<img src="i-all/menu-ico/menu-ico-new.png" alt="Меню Помодоро Пицца Новинки">
+						<p class="mc-title">Новинки</p>
+					</a>
+					
+					<div class="spaser"></div>							
+				</div>
+				<!--end menu-cat-->
+			</div>	
+		</div>	
+		<!--end menu-cat-wrapper-->
+		
+		
+		<!--spec-wrapper-->
+		<div class="spec-wrapper">
+			<div class="spec-grandcolumn">
+				<h1><a href="">Новинки и хиты продаж</a></h1>
+				<!--spec-holder-->
+				<div class="spec-holder">
+				
+					<!--item-product-->
+					<div class="item-product">
+						<span class="label-hit">&nbsp;</span>
+						<a href="" class="ip-middle">
+							<img src="i-all/pizza-small/pizza-chetire-sira.png" alt="Пицца Помодоро 4 сыра">
+							<p class="ip-title">4 сыра</p>
+							<p class="ip-sostav">Томаты, моцарелла, салями, болгарский перец</p>
+						</a>
+						<div class="ip-footer">
+							<p class="ip-cena">
+								1 249 <span class="rouble">Р</span>
+							</p>
+							<!--form-tocart-->
+							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-tocart">
+								<select name="tocart-size" class="tocart-size">
+									<option value="1" selected>30 см, стандарт</option>
+									<option value="2">23 см, мини</option>
+								</select>
+								<select name="tocart-pastry" class="tocart-pastry">
+									<option value="1" selected>Тонкое тесто</option>
+									<option value="2">Пышное тесто</option>
+								</select>
+								<div class="tocart-pult">
+									<input name="" id="" class="tocart-qw" type="text" value="1">								
+									<a href="" class="tocart-up">&#9650;</a>
+									<a href="" class="tocart-down">&#9660;</a>
+								</div>
+								<input value="В&nbsp;корзину" class="bt-tocart" type="submit">
+							</form>
+							<!--end form-tocart-->
+							<a href="" class="ip-moreinfo">Добавить ингредиенты</a>
+						</div>	
+					</div>
+					<!--item-product-->
+					
+					<!--item-product-->
+					<div class="item-product">
+						<span class="label-hit">&nbsp;</span>
+						<a href="" class="ip-middle">							
+							<!--img-substitute-->
+							<p class="img-substitute">
+								Изображение<br>скоро будет добавлено
+							</p>
+							<!--end img-substitute-->
+							<p class="ip-title">4 сыра</p>
+							<p class="ip-sostav">Томаты, моцарелла, салями, болгарский перец</p>
+						</a>
+						<div class="ip-footer">
+							<p class="ip-cena">
+								1 249 <span class="rouble">Р</span>
+							</p>
+							<!--form-tocart-->
+							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-tocart">
+								<select name="tocart-size" class="tocart-size">
+									<option value="1" selected>30 см, стандарт</option>
+									<option value="2">23 см, мини</option>
+								</select>
+								<div class="tocart-pult">
+									<input name="" id="" class="tocart-qw" type="text" value="1">								
+									<a href="" class="tocart-up">&#9650;</a>
+									<a href="" class="tocart-down">&#9660;</a>
+								</div>
+								<input value="В&nbsp;корзину" class="bt-tocart" type="submit">
+							</form>
+							<!--end form-tocart-->
+							<a href="" class="ip-moreinfo">Добавить ингредиенты</a>
+						</div>	
+					</div>
+					<!--item-product-->
+					
+					<!--item-product-->
+					<div class="item-product">
+						<span class="label-hit">&nbsp;</span>
+						<a href="" class="ip-middle">
+							<img src="i-all/pizza-small/pizza-masnaya.png" alt="Пицца Помодоро Мясная">
+							<p class="ip-title">Мясная</p>
+							<p class="ip-sostav">Томаты, моцарелла, салями, болгарский перец</p>
+						</a>
+						<div class="ip-footer">
+							<p class="ip-cena">
+								1 249 <span class="rouble">Р</span>
+							</p>
+							<!--form-tocart-->
+							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-tocart">
+								<select name="tocart-size" class="tocart-size">
+									<option value="1" selected>30 см, стандарт</option>
+									<option value="2">23 см, мини</option>
+								</select>
+								<select name="tocart-size" class="tocart-size">
+									<option value="1" selected>30 см, стандарт</option>
+									<option value="2">23 см, мини</option>
+								</select>
+								<div class="tocart-pult">
+									<input name="" id="" class="tocart-qw" type="text" value="1">								
+									<a href="" class="tocart-up">&#9650;</a>
+									<a href="" class="tocart-down">&#9660;</a>
+								</div>
+								<input value="В&nbsp;корзину" class="bt-tocart" type="submit">
+							</form>
+							<!--end form-tocart-->
+							<a href="" class="ip-moreinfo">Добавить ингредиенты</a>
+						</div>	
+					</div>
+					<!--item-product-->
+					
+					<!--item-product-->
+					<div class="item-product">
+						<span class="label-new">&nbsp;</span>
+						<a href="" class="ip-middle">
+							<img src="i-all/pizza-small/pizza-s-gribami-i-vetchinoi.png" alt="Пицца Помодоро 4 сыра">
+							<p class="ip-title">С ветчиной и грибами </p>
+							<p class="ip-sostav">Томаты, моцарелла, салями, болгарский перец</p>
+						</a>
+						<div class="ip-footer">
+							<p class="ip-cena">
+								1 249 <span class="rouble">Р</span>
+							</p>
+							<!--form-tocart-->
+							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-tocart">
+								<select name="tocart-size" class="tocart-size">
+									<option value="1" selected>30 см, стандарт</option>
+									<option value="2">23 см, мини</option>
+								</select>
+								<div class="tocart-pult">
+									<input name="" id="" class="tocart-qw" type="text" value="1">								
+									<a href="" class="tocart-up">&#9650;</a>
+									<a href="" class="tocart-down">&#9660;</a>
+								</div>
+								<input value="В&nbsp;корзину" class="bt-tocart" type="submit">
+							</form>
+							<!--end form-tocart-->
+							<a href="" class="ip-moreinfo">Добавить ингредиенты</a>
+						</div>	
+					</div>
+					<!--item-product-->
+					
+					<div class="spaser"></div>
+				</div>
+				<!--end spec-holder-->				
+			</div>
+		</div>
+		<!--end spec-wrapper-->
+		
+		<!--share-socseti-wrapper-->
+		<div class="share-socseti-wrapper">
+			<div class="share-socseti">
+			</div>
+		</div>
+		<!--share-socseti-wrapper-->
+		
+		<!--footer-->
+		<div class="footer-wrapper">
+			<!--footer-->
+			<div class="footer">
+				<!--footer-col1-->
+				<div class="footer-col1">
+					<p class="footer-socseti-title">Мы в социальных сетях:</p>
+					<ul class="menu-socseti">
+						<li><a href="" class="ms-vk">&nbsp;</a></li>
+						<li><a href="" class="ms-fb">&nbsp;</a></li>
+						<li><a href="" class="ms-tw">&nbsp;</a></li>
+						<li><a href="" class="ms-inst">&nbsp;</a></li>	
+					</ul>
+					<p>
+						Все права защищены.<br>
+						При использовании материалов <br>
+						с сайта ссылка на сайт обязательна
+					</p>
+					<!--Asvgraf-->                    
+					<div id="asvgraf-copyrights">
+						<span class="asvgraf-madein">Сделано&nbsp;в&nbsp;</span>
+						<span class="asvgraf">asv<a href="http://asvgraf.ru" target="_blank">g</a>raf</span>
+					</div>
+					<!--end Asvgraf-->
+				</div>
+				<!--end footer-col1-->
+				<!--footer-col2-->
+				<div class="footer-col2">
+					<ul class="menu-footer1">
+						<li><a href="">Меню</a></li>
+						<li><a href="">Акции</a></li>
+						<li><a href="">Бонусы</a></li>
+						<li><a href="">Как заказать</a></li>
+						<li><a href="">Сеть пиццерий</a></li>
+					</ul>
+					<ul class="menu-footer2">
+						<li><a href="">О компании</a></li>
+						<li><a href="">Вакансии</a></li>
+						<li><a href="">Франчайзинг</a></li>
+						<li><a href="">Аренда</a></li>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Контроль качества</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+					<div class="spaser"></div>
+				</div>
+				<!--end footer-col2-->
+				<!--footer-col3-->
+				<div class="footer-col3">
+					<div class="footer-tel">
+						<p>
+							+7 (499) 130-61-88
+							<span>Круглосуточно</span>
+						</p>
+						<p>
+							+7 (495) 374-65-22
+							<span>С 10:00 до 22:00</span>
+						</p>
+					</div>
+					<p class="footer-mail">
+						<a href="mailto:info@pizzapomodoro.ru">info@pizzapomodoro.ru</a>
+					</p>	
+					<p class="footer-adress">
+						127642, г. Москва, проезд Дежнева, д. 2A, помещение 6П
+					</p>
+				</div>
+				<!--end footer-col3-->
+				<div class="spaser"></div>
+			</div>
+			<!--end footer-->
+			<div class="footer-decor">&nbsp;</div>
+		</div>
+		<!--end footer-->
+
+
+	<!-- 05 2016 -->	
+	<!--POPUP-TOBUSKET-->	
+	<!--asvpopup-body-->
+	<div class="asvpopup-body" id="popup1">
+		<!--asvpopup-grandcolumn-->
+		<div class="asvpopup-grandcolumn">
+		
+		
+			<!--asvpopup-small-->
+			<div class="asvpopup-small popup_message">
+			
+				<a href="" class="button-close">&nbsp;</a>
+				
+				<!--asvpopup-ins-->
+				<div class="asvpopup-ins">					
+
+					<p class="text-align-center bold">
+							Товар добавлен в корзину
+					</p>
+					<p class="text-align-center">
+						<a href="" class="bt-mid bt-red bt-auto">Перейти в корзину</a>
+						<a href="" class="bt-mid bt-red bt-auto">Продолжить покупки</a>
+					</p>
+					</div>					
+					
+				</div>
+				<!--end asvpopup-ins-->				
+				
+			</div>
+			<!--end asvpopup-small-->
+			
+		</div>	
+		<!--end asvpopup-grandcolumn-->	
+	</div>
+	<!--end asvpopup-body-->
+	<!--/POPUP-TOBUSKET-->
+	<!-- END 05 2016 -->
+
+	
+	<!-- 05 2016 -->	
+	<!--asvpopup-body-->
+	<div class="asvpopup-body" id="popup4">
+		<!--asvpopup-grandcolumn-->
+		<div class="asvpopup-grandcolumn">
+		
+		
+			<!--asvpopup-small-->
+			<div class="asvpopup-small popup_message">
+			
+				<a href="" class="button-close">&nbsp;</a>
+				
+				<!--asvpopup-ins-->
+				<div class="asvpopup-ins">					
+
+					<p class="text-align-center bold">
+							Такой товар уже есть в корзине. Удалить его из корзины чтобы добавить его с другими опциями или ингридиентами?
+					</p>
+					<p class="text-align-center">
+						<a  class="bt-mid bt-red bt-auto">Да</a>
+						<a  class="bt-mid bt-red bt-auto">Нет</a>
+					</p>
+					</div>					
+					
+				</div>
+				<!--end asvpopup-ins-->				
+				
+			</div>
+			<!--end asvpopup-small-->
+			
+		</div>	
+		<!--end asvpopup-grandcolumn-->	
+	</div>
+	<!--end asvpopup-body-->
+	<!-- END 05 2016 -->
+
+	
+	</body>
+</html>
+

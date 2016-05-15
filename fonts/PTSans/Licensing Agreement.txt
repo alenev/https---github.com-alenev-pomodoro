@@ -1,0 +1,53 @@
+Открытая пользовательская лицензия компании ПараТайп
+
+Копирайт: (с) ООО НПП «ПараТайп», 2009. Все права защищены.
+Copyright (c) 2009, ParaType Ltd. All Rights Reserved.
+
+ЛИЦЕНЗИОННЫЙ ДОГОВОР
+для шрифтов с Оригинальным названием: ПТ Санс (PT Sans), ПТ Сериф (PT Serif), ПТ Моно (PT Mono).
+Версия 1.3 от 20.01.2012
+
+ПРАВА И ОГРАНИЧЕНИЯ
+ООО НПП «ПараТайп» предоставляет неисключительные права любому юридическому или физическому лицу использовать полученные шрифты, а также копировать, модифицировать и распространять как оригинальные, так и модифицированные версии. Вы можете размещать их в сети для свободного скачивания, встраивать в документы и Веб-страницы, включать в комплекты поставок коммерческих и некоммерческих продуктов, а также использовать и распространять любыми другими способами при условии соблюдения следующих ограничений:
+
+- Ни оригинальные шрифты, ни их модификации, ни производные от них, ни их отдельные части не могут распространяться с целью коммерческой выгоды сами по себе. Шрифты являются бесплатными. Однако не запрещается включать их в состав коммерческих продуктов.
+
+- Оригинальные шрифты и производные от них могут распространяться только при условии наличия в поставке текста данного Лицензионного договора и информации о владельце исключительных прав (копирайта), приведенной выше. Вы не имеете права менять текст Лицензионного договора, и он должен быть помещен либо в отдельный текстовый файл, либо встроен в шрифт таким образом, чтобы пользователь мог легко увидеть и прочитать его.
+
+- Запрещается использование Оригинального названия шрифта, в том числе и в сочетаниях с другими словами, в качестве имен производных версий, за исключением случаев, когда разрешение на такое использование получено от ООО НПП «ПараТайп» в письменном виде.
+
+ДЕЙСТВИЕ ДОГОВОРА
+Действие договора не имеет ограничения по территории и сроку, но договор становится недействительным в случае, если хотя бы одно из вышеперечисленных условий не соблюдается.
+
+ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ
+ДАННОЕ ШРИФТОВОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПОСТАВЛЯЕТСЯ БЕЗ КАКИХ-ЛИБО ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ ОБЯЗАТЕЛЬСТВ СО СТОРОНЫ ПОСТАВЩИКА, ВКЛЮЧАЯ КОММЕРЧЕСКИЕ ГАРАНТИИ И ГАРАНТИРОВАННОСТЬ ПРИГОДНОСТИ ДЛЯ КАКИХ-ЛИБО КОНКРЕТНЫХ СФЕР ИСПОЛЬЗОВАНИЯ. ООО НПП «ПАРАТАЙП» НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ НЕСЕТ ОТВЕТСТВЕННОСТИ ЗА УБЫТКИ И УЩЕРБ, ВЫЗВАННЫЕ ИСПОЛЬЗОВАНИЕМ ИЛИ НЕВОЗМОЖНОСТЬЮ ИСПОЛЬЗОВАНИЯ ДАННЫХ ШРИФТОВ, ИЛИ ПРЕДОСТАВЛЕНИЕМ ИЛИ НЕПРЕДОСТАВЛЕНИЕМ УСЛУГ ПО ПОДДЕРЖКЕ, СВЯЗАННЫХ С ИСПОЛЬЗОВАНИЕМ ДАННЫХ ШРИФТОВ.
+
+OOO НПП «ПараТайп» 
+
+
+
+
+ParaType Free Font Licensing Agreement
+
+Copyright (c) 2009, ParaType Ltd. All Rights Reserved.
+
+LICENSING AGREEMENT
+for the fonts with Original Name: PT Sans, PT Serif, PT Mono
+Version 1.3 - January 20, 2012
+
+GRANT OF LICENSE
+ParaType Ltd grants you the right to use, copy, modify the fonts and distribute modified and unmodified copies of the fonts by any means, including placing on Web servers for free downloading, embedding in documents and Web pages, bundling with commercial and non commercial products, if it does not conflict with the conditions listed below:
+
+- You may bundle the fonts with commercial software, but you may not sell the fonts by themselves. They are free.
+
+- You may distribute the fonts in modified or unmodified versions only together with this Licensing Agreement and with above copyright notice. You have no right to modify the text of Licensing Agreement. It can be placed in a separate text file or inserted into the font file, but it must be easily viewed by users.
+
+- You may not distribute modified version of the font under the Original name or а combination of Original name with any other words without explicit written permission from ParaType.
+
+TERMINATION & TERRITORY
+This license has no limits on time and territory, but it becomes null and void if any of the above conditions are not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL PARATYPE BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+
+ParaType Ltd 

@@ -1,0 +1,127 @@
+/*	-------------------------
+	info@asvgraf.ru; 
+	web-engineering, design, front-end: Anna Sudarikova
+	OOCSS (object oriented css)
+	2016
+	-------------------------	*/
+	
+/*PTSans*/
+	
+@font-face {
+	font-family: 'PTSans';
+	src: 	url('../fonts/PTSans/PTSansRegular/PTS55F_W.eot'); /* IE9 */
+	src: 	url('../fonts/PTSans/PTSansRegular/PTS55F_W.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('../fonts/PTSans/PTSansRegular/PTS55F_W.woff') format('woff'), /* all modern */
+			url('../fonts/PTSans/PTSansRegular/PTS55F_W.ttf') format('truetype'), /* Safari, Android, iOS */ 
+			url('../fonts/PTSans/PTSansRegular/PTS55F_W.svg') format('svg'); /* iOS */
+	font-weight: normal;
+	font-style: normal;
+}	
+
+@font-face {
+	font-family: 'PTSans';
+	src: 	url('../fonts/PTSans/PTSansBold/PTS75F_W.eot');
+	src: 	url('../fonts/PTSans/PTSansBold/PTS75F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSans/PTSansBold/PTS75F_W.woff') format('woff'),
+			url('../fonts/PTSans/PTSansBold/PTS75F_W.ttf') format('truetype'),
+			url('../fonts/PTSans/PTSansBold/PTS75F_W.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PTSans';
+	src: 	url('../fonts/PTSans/PTSansItalic/PTS56F_W.eot');
+	src: 	url('../fonts/PTSans/PTSansItalic/PTS56F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSans/PTSansItalic/PTS56F_W.woff') format('woff'),
+			url('../fonts/PTSans/PTSansItalic/PTS56F_W.ttf') format('truetype'),
+			url('../fonts/PTSans/PTSansItalic/PTS56F_W.svg') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PTSans';
+	src: 	url('../fonts/PTSans/PTSansBoldItalic/PTS76F_W.eot');
+	src: 	url('../fonts/PTSans/PTSansBoldItalic/PTS76F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSans/PTSansBoldItalic/PTS76F_W.woff') format('woff'),
+			url('../fonts/PTSans/PTSansBoldItalic/PTS76F_W.ttf') format('truetype'),
+			url('../fonts/PTSans/PTSansBoldItalic/PTS76F_W.svg') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*PTSerif*/
+	
+@font-face {
+	font-family: 'PTSerif';
+	src: 	url('../fonts/PTSerif/PTSerifRegular/PTF55F_W.eot'); /* IE9 */
+	src: 	url('../fonts/PTSerif/PTSerifRegular/PTF55F_W.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('../fonts/PTSerif/PTSerifRegular/PTF55F_W.woff') format('woff'), /* all modern */
+			url('../fonts/PTSerif/PTSerifRegular/PTF55F_W.ttf') format('truetype'), /* Safari, Android, iOS */ 
+			url('../fonts/PTSerif/PTSerifRegular/PTF55F_W.svg') format('svg'); /* iOS */
+	font-weight: normal;
+	font-style: normal;
+}	
+
+@font-face {
+	font-family: 'PTSerif';
+	src: 	url('../fonts/PTSerif/PTSerifBold/PTF75F_W.eot');
+	src: 	url('../fonts/PTSerif/PTSerifBold/PTF75F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSerif/PTSerifBold/PTF75F_W.woff') format('woff'),
+			url('../fonts/PTSerif/PTSerifBold/PTF75F_W.ttf') format('truetype'),
+			url('../fonts/PTSerif/PTSerifBold/PTF75F_W.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PTSerif';
+	src: 	url('../fonts/PTSerif/PTSerifItalic/PTF56F_W.eot');
+	src: 	url('../fonts/PTSerif/PTSerifItalic/PTF56F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSerif/PTSerifItalic/PTF56F_W.woff') format('woff'),
+			url('../fonts/PTSerif/PTSerifItalic/PTF56F_W.ttf') format('truetype'),
+			url('../fonts/PTSerif/PTSerifItalic/PTF56F_W.svg') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PTSerif';
+	src: 	url('../fonts/PTSerif/PTSerifBoldItalic/PTF76F_W.eot');
+	src: 	url('../fonts/PTSerif/PTSerifBoldItalic/PTF76F_W.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/PTSerif/PTSerifBoldItalic/PTF76F_W.woff') format('woff'),
+			url('../fonts/PTSerif/PTSerifBoldItalic/PTF76F_W.ttf') format('truetype'),
+			url('../fonts/PTSerif/PTSerifBoldItalic/PTF76F_W.svg') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*RUBSN*/
+
+@font-face {
+	font-family: 'RUBSN';
+	src: 	url('../fonts/RUBSN/rubsn.eot');
+	src: 	url('../fonts/RUBSN/rubsn.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/RUBSN/rubsn.woff') format('woff'),
+			url('../fonts/RUBSN/rubsn.ttf') format('truetype'),
+			url('../fonts/RUBSN/rubsn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*RUBSR*/
+/*с засечками
+
+@font-face {
+	font-family: 'RUBSR';
+	src: 	url('../fonts/RUBSR/rubsr.eot');
+	src: 	url('../fonts/RUBSR/rubsr.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/RUBSR/rubsr.woff2') format('woff2'),
+			url('../fonts/RUBSR/rubsr.woff') format('woff'),
+			url('../fonts/RUBSR/rubsr.ttf') format('truetype'),
+			url('../fonts/RUBSR/rubsr.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/

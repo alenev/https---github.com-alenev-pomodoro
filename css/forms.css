@@ -1,0 +1,998 @@
+/*	-------------------------
+	info@asvgraf.ru; 
+	web-engineering, design, front-end: Anna Sudarikova
+	OOCSS (object oriented css)
+	2016
+	-------------------------	*/
+	
+/*	-------------------------
+	.form-tocart Отдельная форма
+	-------------------------	*/
+
+.form-tocart {
+	margin: 0 0 10px 0;	
+}
+
+select.tocart-size,
+select.tocart-pastry {
+	background: rgb(20,146,50); /*rgb(20,146,50);*/
+	border: 1px solid rgb(20,146,50); /*1px solid rgb(20,146,50);*/
+	color: rgb(254,254,254);/*rgb(254,254,254);*/
+	cursor: pointer;
+	font-size: 15px;
+	font-style: italic;
+	line-height: 1.2em;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 6px;
+	width: 164px;
+}
+
+select.tocart-size:hover,
+select.tocart-pastry:hover {
+	background: rgb(0,115,0);
+	color: rgb(255,240,0);
+}
+
+select.tocart-size option {
+}
+
+.tocart-pult {
+	background: rgb(254,254,254);
+	border: 1px solid rgb(194,194,194);
+	display: inline-block;
+	position: relative;
+	height: 32px; 	/*total 34*/
+	width: 78px;	/*total 80*/
+	
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;  
+	border-radius: 3px;
+}
+
+.tocart-pult .tocart-qw {
+	background: none;
+	border: none;
+	font-size: 16px;
+	line-height: 1.2em;
+	font-weight: bold;
+	height: 32px;
+	padding: 0 0 0 6px;
+	width: 72px; /*total 78*/
+}
+
+.tocart-pult a.tocart-up,
+.tocart-pult a.tocart-down {
+	background: rgb(20,146,50);
+	border-left: 1px solid rgb(194,194,194);
+	color: rgb(254,254,254);
+	cursor: pointer;
+	display: block;
+	font-size: 12px;
+	height: 16px; 
+	line-height: 1.2em;	
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 rgb(0,99,0);
+	width: 23px;
+	
+	position: absolute;
+	z-index:2;		
+}
+
+.tocart-pult a.tocart-up {
+	top:0;
+	right:0;
+	
+		-webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; -ms-border-radius: 0 3px 0 0; -o-border-radius: 0 3px 0 0;  
+	border-radius: 0 3px 0 0;
+}
+
+.tocart-pult a.tocart-down {	
+	bottom:0px;
+	right:0;
+	
+		-webkit-border-radius: 0 0 3px 0; -moz-border-radius: 0 0 3px 0; -ms-border-radius: 0 0 3px 0; -o-border-radius: 0 0 3px 0;  
+	border-radius: 0 0 3px 0;
+}
+
+.tocart-pult a.tocart-up:hover,
+.tocart-pult a.tocart-down:hover {
+	background: rgb(0,115,0);
+	color: rgb(255,240,0);
+}
+	
+.bt-tocart,
+input.bt-tocart,
+a.bt-tocart {
+	background: rgb(226,0,26);
+	border: 1px solid rgb(255,0,29);
+	color: rgb(254,254,254);
+	cursor: pointer;
+	display: inline-block; /* чтобы кнопки во всплывающих окнах могли стоять подряд */
+	font-family: 'PTSans', Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	line-height: 1.2em;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 rgb(1,1,1);
+	text-transform: uppercase;	
+	
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;  
+	border-radius: 3px;
+}
+
+input.bt-tocart {
+	height: 34px;
+	width: 80px;
+}
+
+a.bt-tocart {
+	padding: 8px 0 0 0;
+	height: 24px;
+	width: 78px;
+}
+
+.bt-tocart:hover,
+input.bt-tocart:hover,
+a.bt-tocart:hover {
+	background: rgb(172,0,0);	
+}
+
+/*	-------------------------
+	FORM MESSAGES
+	-------------------------	*/	
+
+.form-message {
+	background: rgb(204,255,204);
+	color: rgb(30,30,30);
+	font-size: 15px;
+	font-style: italic;
+	line-height: 1.2em;
+	text-align: center;
+	margin: 0 0 14px 0;
+	padding: 10px 15px;
+}
+
+.fm-no {
+	background: rgb(255,204,204);
+}
+
+.fm-yes {
+	background: rgb(204,255,204);
+}
+
+.fm-process {
+	background: rgb(255,255,153);
+}
+
+/*	-------------------------
+	BUTTONS
+	-------------------------	*/
+
+/* bt-base */	
+
+.bt-base,
+input.bt-base,
+a.bt-base {
+	border: none;	
+	cursor: pointer;
+	display: inline-block; 
+	font-family: 'PTSans', Arial, Helvetica, sans-serif; 
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;  
+	border-radius: 3px;
+}
+
+/* bt-mid */
+
+.bt-mid,
+input.bt-mid,
+a.bt-mid {
+	border: none;	
+	cursor: pointer;
+	display: inline-block; 
+	font-family: 'PTSans', Arial, Helvetica, sans-serif; 
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;  
+	border-radius: 3px;		
+}
+
+/* Маленькая кнопка для отображения внутри формы */
+	
+/* button-small*/ 		
+	
+.bt-small,
+input.bt-small,
+a.bt-small {
+	border: none;
+	cursor: pointer;
+	display: inline-block; 
+	font-family: 'PTSans', Arial, Helvetica, sans-serif; 
+	font-size: 15px;
+	font-style: italic;
+	line-height: 1.2em;
+	font-weight: normal;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+
+		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;  
+	border-radius: 3px;	
+}
+
+/* Цвета кнопок */
+
+/*.bt-red*/	
+
+.bt-red,
+a.bt-red {
+	background-color: rgb(226,0,26);
+	border: 1px solid rgb(255,0,29);
+	color: rgb(254,254,254);
+	/*text-shadow: 1px 1px 0 rgb(1,1,1);*/
+}
+
+.bt-red:hover,
+a.bt-red:hover {
+	background-color: rgb(172,0,0);
+	color: rgb(255,240,0);
+}
+
+/*.bt-green*/	
+
+.bt-green,
+a.bt-green {
+	background: rgb(20,146,50); 
+	border: 1px solid rgb(20,146,50);
+	color: rgb(254,254,254);
+	/*text-shadow: 1px 1px 0 rgb(1,1,1);*/
+}
+
+.bt-green:hover,
+a.bt-green:hover {
+	background: rgb(0,115,0);
+	color: rgb(255,240,0);
+}
+
+/*.bt-gold*/
+
+.bt-gold,
+a.bt-gold {
+	background: rgb(171,130,81);
+	color: rgb(254,254,254);
+}
+
+.bt-gold:hover,
+a.bt-gold:hover {
+	background: rgb(119,93,24);
+	color: rgb(254,254,254);
+} 
+
+/* Размеры кнопок */
+
+/*.bt-200x56*/
+
+.bt-200x56 {
+	height: 56px; 
+	width: 200px;
+}
+
+a.bt-200x56 {
+	height: 40px; 
+	padding: 14px 0 0 0;
+	width: 198px; 	
+}
+
+/*.bt-110x35*/
+
+.bt-110x35 {
+	height: 35px; 
+	width: 110px;
+}
+
+a.bt-110x35 {
+	height: 27px; 
+	padding: 6px 0 0 0;
+	width: 108px; 	
+}
+
+/*.bt-auto*/ /* Маленькая кнопка без длины */
+
+a.bt-auto {
+	padding: 2px 10px;
+	width: auto;
+}
+
+/*	-------------------------
+	BUTTONS .button-close
+	-------------------------	*/	
+
+a.button-close {
+	background: rgb(238,0,0) url(../i-base/button-close.gif) no-repeat 3px 3px;
+	cursor: pointer;
+	display: block;
+	height: 26px; 
+	text-decoration: none;
+	width: 26px;
+	
+		-webkit-border-radius: 3px;  -moz-border-radius: 3px; -ms-border-radius: 3px;  -o-border-radius: 3px; 
+	border-radius: 3px;
+	
+		-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.4); -moz-box-shadow: 0px 0px 4px rgba(0,0,0,.4); -ms-box-shadow: 0px 0px 4px rgba(0,0,0,.4); -o-box-shadow: 0px 0px 4px rgba(0,0,0,.4);    
+	box-shadow: 0px 0px 4px rgba(0,0,0,.4);
+}
+
+a.button-close:hover {
+	background: rgb(172,0,0) url(../i-base/button-close.gif) no-repeat 3px -27px;
+}
+
+/*	-------------------------
+	FORMS BASIC ELEMENTS
+	-------------------------	*/
+
+form {
+	font-size: 16px;
+	line-height: 1.2em;
+}	
+
+input, textarea, select {
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(194,194,194);
+	font-family: 'PTSans', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.2em; 
+	
+		-webkit-border-radius: 3px;  -moz-border-radius: 3px; -ms-border-radius: 3px;   -o-border-radius: 3px;  
+	border-radius: 3px;
+}	
+	
+form .error {
+	color: red;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.2em;
+	margin: 0;
+	padding: 2px;	
+	}
+	
+form sup {
+	color: red;
+	}
+
+/* комментарий в форме, простой */
+	
+form .f-comment {
+	color: rgb(55,55,55); /*rgb(72,77,86)*/
+	font-style: italic;
+	font-size: 14px;
+	line-height: 1.2em;
+	margin: 0;
+}
+
+/* комментарий в форме, блоковый */
+
+form .f-comment-block {
+	color: rgb(55,55,55);
+	display: block;
+	font-style: italic;
+	font-size: 14px;
+	line-height: 1.2em;
+	margin: 0;
+}	
+	
+/* code-other */
+
+a.code-other {
+	background: url(../i-base/new-code.gif) no-repeat -13px 0;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.3em;
+	padding-left: 20px;
+	}
+	
+a.code-other:hover {
+	background: url(../i-base/new-code.gif) no-repeat 0 -26px;
+	}
+	
+/*	-------------------------
+	FORMS BASIC ELEMENTS fieldset.f-standart
+	-------------------------	*/		
+
+fieldset.f-standart {
+	clear: both;
+	float: none;
+	margin: 0 0 36px 0;
+}
+	
+fieldset.f-standart div {
+	clear: both;
+	float: none;
+	margin: 0 0 10px 0; /*12*/
+}
+	
+fieldset.f-standart div div {
+	clear: none;
+	/*margin: 0 0 6px 0;*/
+}
+
+fieldset.f-standart div.error {
+	margin: 0 0 2px 0;
+}
+
+fieldset.f-standart legend {
+	font-weight: bold;
+	margin-bottom: 10px;
+}		
+	
+/* ---------- fieldset.f-standart ---------- */
+	
+fieldset.f-standart input,
+fieldset.f-standart select,
+fieldset.f-standart textarea {
+	padding: 4px;
+	margin: 0 4px 0 0;
+}	
+	
+fieldset.f-standart input[type="text"],
+fieldset.f-standart input[type="tel"],
+fieldset.f-standart input[type="email"],
+fieldset.f-standart input[type="url"],
+fieldset.f-standart input[type="password"],
+fieldset.f-standart input[type="file"],
+fieldset.f-standart textarea {	
+	width: 280px; /*290*/
+}
+	
+fieldset.f-standart select {
+	width: 272px; /*delta 8*/
+}
+	
+fieldset.f-standart textarea {
+	height: 80px;
+}
+
+/*f-xxxs*/	
+
+fieldset.f-standart input.f-xxxs[type="text"],
+fieldset.f-standart input.f-xxxs[type="tel"],
+fieldset.f-standart input.f-xxxs[type="email"],
+fieldset.f-standart input.f-xxxs[type="url"],
+fieldset.f-standart input.f-xxxs[type="password"],
+fieldset.f-standart input.f-xxxs[type="file"],
+fieldset.f-standart textarea.f-xxxs {	
+	width: 60px;
+}
+	
+fieldset.f-standart select.f-xxxs {
+	width: 52px;
+}	
+	
+/*f-xxs*/	
+
+fieldset.f-standart input.f-xxs[type="text"],
+fieldset.f-standart input.f-xxs[type="tel"],
+fieldset.f-standart input.f-xxs[type="email"],
+fieldset.f-standart input.f-xxs[type="url"],
+fieldset.f-standart input.f-xxs[type="password"],
+fieldset.f-standart input.f-xxs[type="file"],
+fieldset.f-standart textarea.f-xxs {	
+	width: 110px;
+}
+
+fieldset.f-standart select.f-xxs {
+	width: 102px;
+}
+	
+/*f-xs*/	
+
+fieldset.f-standart input.f-xs[type="text"],
+fieldset.f-standart input.f-xs[type="tel"],
+fieldset.f-standart input.f-xs[type="email"],
+fieldset.f-standart input.f-xs[type="url"],
+fieldset.f-standart input.f-xs[type="password"],
+fieldset.f-standart input.f-xs[type="file"],
+fieldset.f-standart textarea.f-xs {	
+	width: 170px;
+}
+
+fieldset.f-standart select.f-xs {
+	width: 162px;
+}		
+	
+/*f-s*/
+
+fieldset.f-standart input.f-s[type="text"],
+fieldset.f-standart input.f-s[type="tel"],
+fieldset.f-standart input.f-s[type="email"],
+fieldset.f-standart input.f-s[type="url"],
+fieldset.f-standart input.f-s[type="password"],
+fieldset.f-standart input.f-s[type="file"],
+fieldset.f-standart textarea.f-s {	
+	width: 230px;
+}
+
+fieldset.f-standart select.f-s {
+	width: 222px;
+}
+	
+/*f-l*/
+
+fieldset.f-standart input.f-l[type="text"],
+fieldset.f-standart input.f-l[type="tel"],
+fieldset.f-standart input.f-l[type="email"],
+fieldset.f-standart input.f-l[type="url"],
+fieldset.f-standart input.f-l[type="password"],
+fieldset.f-standart input.f-l[type="file"],
+fieldset.f-standart textarea.f-l {	
+	width: 350px;
+}
+
+fieldset.f-standart select.f-l {
+	width: 342px;
+}
+
+fieldset.f-standart textarea.f-l {
+	height: 66px;
+}
+
+/*f-xl*/
+
+fieldset.f-standart input.f-xl[type="text"],
+fieldset.f-standart input.f-xl[type="tel"],
+fieldset.f-standart input.f-xl[type="email"],
+fieldset.f-standart input.f-xl[type="url"],
+fieldset.f-standart input.f-xl[type="password"],
+fieldset.f-standart input.f-xl[type="file"],
+fieldset.f-standart textarea.f-xl {	
+	width: 410px;
+}
+
+fieldset.f-standart select.f-xl {
+	width: 402px;
+}
+
+fieldset.f-standart textarea.f-xl {
+	height: 110px;
+}
+
+/*f-xxl*/
+
+fieldset.f-standart input.f-xxl[type="text"],
+fieldset.f-standart input.f-xxl[type="tel"],
+fieldset.f-standart input.f-xxl[type="email"],
+fieldset.f-standart input.f-xxl[type="url"],
+fieldset.f-standart input.f-xxl[type="password"],
+fieldset.f-standart input.f-xxl[type="file"],
+fieldset.f-standart textarea.f-xxl {	
+	width: 470px;
+}
+
+fieldset.f-standart select.f-xxl {
+	width: 462px;
+}
+
+fieldset.f-standart textarea.f-xxl {
+	height: 170px;
+}
+
+/*	-------------------------
+	FORMS BASIC ELEMENTS others
+	-------------------------	*/
+	
+/*for code.php*/	
+/* ---------- fieldset.f-standart div.code ---------- */
+
+fieldset.f-standart div.code label {
+	display: block;
+}
+	
+fieldset.f-standart div.code input {
+	margin-right: 10px;
+}
+
+fieldset.f-standart div.code img {
+	margin-right: 2px;
+}
+
+/* Класс для many checkboxes / radios в столбик */
+/* ---------- fieldset.f-standart div.checkb ---------- */
+
+fieldset.f-standart .checkb-radio {
+	margin-bottom: 22px;
+}
+
+fieldset.f-standart .checkb-radio label {
+	display: block;
+	font-style: italic;
+	margin: 0 0 8px 0;
+	}
+	
+fieldset.f-standart .checkb-radio .f-comment-block {
+	margin: 0 0 0 22px;
+}	
+
+/*	-------------------------
+	FORMS:  form.form-universal
+	-------------------------	*/	
+	
+.form-universal {
+	background: rgb(240,240,240);
+	display: block;
+	margin-bottom: 30px;
+	padding: 20px;
+	
+		-webkit-border-radius: 3px;  -moz-border-radius: 3px; -ms-border-radius: 3px;  -o-border-radius: 3px; 
+	border-radius: 3px;
+}
+	
+.form-universal legend {
+	margin: 0 0 0 170px;
+}	
+	
+.form-universal .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 140px;
+}
+	
+.form-universal .f-rightcolumn {
+	margin: 0 0 0 170px;
+	min-height: 20px; /*fix bug in moz with sup*/
+}
+	
+.form-universal fieldset.f-standart div.error  {
+	margin: 0 0 0 170px;
+}
+
+/*	-------------------------
+	FORMS:  .form-dostavka
+	-------------------------	*/
+
+.form-dostavka {
+	display: block;
+	margin-bottom: 70px;
+}
+
+.form-dostavka .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 250px;
+}
+	
+.form-dostavka .f-rightcolumn {
+	margin: 0 0 0 280px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+.form-dostavka div.error  {
+	margin: 0 0 0 280px;
+}
+
+
+.form-dostavka fieldset.f-standart .checkb-radio {
+	margin-bottom: 0;
+}
+
+/*	-------------------------
+	FORMS:  .form-samovivoz
+	-------------------------	*/
+
+.form-samovivoz {
+	display: block;
+	margin-bottom: 70px;
+}
+
+.form-samovivoz .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 250px;
+}
+	
+.form-samovivoz .f-rightcolumn {
+	margin: 0 0 0 280px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+.form-samovivoz div.error  {
+	margin: 0 0 0 280px;
+}
+
+
+.form-samovivoz fieldset.f-standart .checkb-radio {
+	margin-bottom: 0;
+}
+
+/*	-------------------------
+	FORMS:  .form-recall
+	-------------------------	*/
+
+.form-recall {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.form-recall .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 140px;
+}
+	
+.form-recall .f-rightcolumn {
+	margin: 0 0 0 170px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+.form-recall div.error  {
+	margin: 0 0 0 280px;
+}
+
+
+.form-recall fieldset.f-standart .checkb-radio {
+	margin-bottom: 0;
+}
+
+/*	-------------------------
+	FORMS:  .form-quolity
+	-------------------------	*/
+
+.form-quolity {
+	background: rgb(240,240,240);
+	display: block;
+	margin-bottom: 30px;
+	padding: 20px;
+	
+		-webkit-border-radius: 3px;  -moz-border-radius: 3px; -ms-border-radius: 3px;  -o-border-radius: 3px; 
+	border-radius: 3px;
+}
+
+.form-quolity .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 140px;
+}
+	
+.form-quolity .f-rightcolumn {
+	margin: 0 0 0 170px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+.form-quolity div.error  {
+	margin: 0 0 0 170px;
+}
+
+
+.form-quolity fieldset.f-standart .checkb-radio {
+	margin-bottom: 0;
+}
+
+/*	-------------------------
+	FORMS:  .form-dopingr
+	-------------------------	*/
+	
+.form-dopingr {	
+}
+
+.form-dopingr div {
+	border-bottom: 1px dotted rgb(120,120,120);
+	padding: 2px 10px 4px 0;
+}
+
+.form-dopingr div div {
+	padding: 0;
+	border-bottom: none;
+}
+
+.form-dopingr .f-leftcolumn {
+	float: left;	
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 1.2em;
+	margin: 0 20px 0 0;
+	width: 130px;
+}
+	
+.form-dopingr .f-rightcolumn {
+	font-style: italic;
+	margin: 0 0 0 150px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+
+.form-dopingr .f-rightcolumn label {
+	display: block;
+	margin: 0 0 8px 0;
+}
+
+.form-dopingr .f-rightcolumn label  .dopingr-cena1,
+.form-dopingr .f-rightcolumn label  .dopingr-cena2,
+.form-dopingr .f-rightcolumn label  .rouble  {	
+	font-weight: bold;
+}
+
+/*	-------------------------
+	.form-action Отдельная форма
+	-------------------------	*/
+
+.form-action {
+	margin: 0 0 20px 0;	
+}
+
+.form-action fieldset.f-standart {
+	margin: 0 0 20px 0;
+}
+
+.form-action fieldset.f-standart select {
+	background: rgb(20,146,50); /*rgb(20,146,50);*/
+	border: 1px solid rgb(20,146,50); /*1px solid rgb(20,146,50);*/
+	color: rgb(254,254,254);/*rgb(254,254,254);*/
+	cursor: pointer;
+	display: block;
+	font-size: 18px;
+	line-height: 1.2em;
+	margin: 0 auto 14px;
+}
+
+.form-action fieldset.f-standart select:hover {
+	background: rgb(0,115,0);
+	color: rgb(255,240,0);
+}
+
+.form-action fieldset.f-standart select option {
+}
+
+.form-action .form-message {
+	font-weight: bold;
+}
+
+/*	-------------------------
+	эти формы не подключены
+    FORMS:  form.form-registration
+	FORMS:  form.form-rememberpassw
+	FORMS:  form.form-remembecode
+	FORMS:  form.form-authorization
+	FORMS:	form-confirm
+	FORMS:  form-profile
+	-------------------------	*/
+	
+.form-registration,
+.form-rememberpassw,
+.form-remembecode,
+.form-authorization,
+.form-confirm,
+.form-profile {
+	display: block;
+	margin-bottom: 70px;
+}
+	
+.form-registration legend,
+.form-rememberpassw legend,
+.form-remembecode legend,
+.form-authorization legend,
+.form-confirm legend,
+.form-profile legend {
+	margin:0 0 0 170px;
+}	
+	
+.form-registration .f-leftcolumn,
+.form-rememberpassw .f-leftcolumn,
+.form-remembecode .f-leftcolumn,
+.form-authorization .f-leftcolumn,
+.form-confirm .f-leftcolumn,
+.form-profile .f-leftcolumn {
+	float: left;
+	padding-right: 30px;
+	text-align: right;
+	width: 140px;
+}
+	
+.form-registration .f-rightcolumn,
+.form-rememberpassw .f-rightcolumn,
+.form-remembecode .f-rightcolumn,
+.form-authorization .f-rightcolumn,
+.form-confirm .f-rightcolumn,
+.form-profile .f-rightcolumn {
+	margin: 0 0 0 170px;
+	min-height: 20px; /*fix bug in moz with sup*/
+	}
+	
+form.form-registration div.error,
+form.form-rememberpassw div.error,
+form.form-remembecode div.error,
+form.form-authorization div.error,
+form.form-confirm div.error, 
+form.form-profile div.error  {
+	margin: 0 0 0 170px;
+}
+
+form.form-registration .button-base,
+form.form-rememberpassw .button-base,
+form.form-remembecode .button-base,
+form.form-authorization .button-base,
+form.form-confirm .button-base,
+form.form-profile .button-base {
+	margin-left: 170px;
+	height: 29px; /*31*/	
+}
+
+form.form-registration .button-base {
+	width: 230px; 
+}
+
+form.form-rememberpassw .button-base,
+form.form-remembecode .button-base,
+form.form-authorization .button-base,
+form.form-confirm .button-base,
+form.form-profile .button-base  {
+	width: 170px; 
+}
+
+/**/
+
+form.form-profile .button-base  {
+	margin-top: -20px;
+}
+
+form.form-profile .button-small {
+	display: inline-block;
+}
+
+form.form-profile {
+	border-bottom: 5px dotted rgb(162,167,176);
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+.form_line .error_text {
+display: none;
+}
+.form_line.error .error_text {
+display: block;
+font-size: 11px;
+width: 210px;
+}
+.form-recall-send {
+display: none;
+}
+.action_constructor_item.num2,
+.action_constructor_item.num3 {
+display: none !important;
+}
+.action_constructor_item.num2.active,
+.action_constructor_item.num3.active {
+display: block !important;
+}
+.action_constructor_total {
+width: 100%;
+float: left;
+margin: 15px 0;
+text-align: center;
+}
+.action_constructor_total span {
+color: rgb(255, 12, 0);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2em;
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'PTRoubleSerif';
+    src: url('rubsr.eot');
+    src: url('rubsr.eot') format('embedded-opentype'),
+         url('rubsr.woff2') format('woff2'),
+         url('rubsr.woff') format('woff'),
+         url('rubsr.ttf') format('truetype'),
+         url('rubsr.svg#PTRoubleSerif') format('svg');
+}
