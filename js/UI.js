@@ -540,36 +540,17 @@ $(".geo-city").text(city);
 $(".geo-region").text(region);
 alert("msg01: pomodoro_city - "+city+" pomadoro_region - "+region+"");
 popup_hide();
-
-
-var change_city_mode = 1; // Перезагружаем страницу и выводим сообщение о том что цены перессчитаны.
-
 $(".header-basket ul li").each(function(){ // перебираем товары в корзине чтобы выявить товар который недоступен в новом выбранном городе
+
 var id = parseInt($(this).attr("data-id"));
 if (id == 2){ // например в БД находим пометку что в этом городе недоступен товар с id=2
 $(this).remove(); // удаляем из миникорзины товар
 minicart_update();
-change_city_mode = 2; // Перезагружаем страницу и выводим сообщение о том что цены перессчитаны и о том что некоторые товары удалены так как их нет в новом городе.
 }
 });
-
-$.cookie('change_city_mode', ''+change_city_mode+'', { expires: 31 });
-var href = document.location.href;
-document.location.href = href;
-});
-
-
-var change_city_mode = parseInt($.cookie('change_city_mode'));
-if (change_city_mode != 0) {
 var popup_id = "popup6";
 popup_show(popup_id);
-if (change_city_mode == 2) {
-$("#popup6 .txt1").show();
-}else{
-$("#popup6 .txt1").hide();
-}
-}
-$.cookie('change_city_mode', '0', { expires: 31 });
+});
 
 if ($("#popup1").length > 0) {
 $(".header-recall").on('click',function(e){
