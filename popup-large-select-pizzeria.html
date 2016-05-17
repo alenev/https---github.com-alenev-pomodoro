@@ -15,6 +15,8 @@
 		<link href="css/master.css" rel="stylesheet" media="all">
 		<link href="css/print.css" rel="stylesheet" media="print">
 		
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		
 		<!--jquery-->
 		<script src="js/jquery-1.12.0.min.js"></script>		
 		<!--end  jquery-->
@@ -51,6 +53,8 @@
 		<meta name="yandex-verification" content="">
 		<meta name="google-site-verification" content="">
 		<!--end google-yandex-verification-->
+		
+		
 	</head>
 
 
@@ -108,7 +112,7 @@
 						<span class="geo-name">Ваш город:</span>
 						<span class="geo-city">Железнодорожный</span>
 						<span class="geo-region">Московская обл.</span>						
-						<a href="" class="geo-change">Выбрать<br>другой город </a>
+						<a class="geo-change">Выбрать<br>другой город </a>
 					</div>
 				</div>
 				<!--end header-col1-->
@@ -128,7 +132,7 @@
 				<!--end header-col2-->
 				<!--header-col3-->
 				<div class="header-col3">
-					<a href="" class="header-recall">Обратный звонок</a>	
+					<a class="header-recall">Обратный звонок</a>	
 					<a href="" class="header-basket">						
 						<dl>
 						  <dt>Кол-во:</dt>
@@ -151,7 +155,7 @@
 		</div>
 		<!--end header-->
 		
-		
+	<div id="map2" style="width:100%; height:565px"></div>	
 	
 		<!--template-type1-wrapper-->
 		<div class="template-type1-wrapper">
@@ -206,8 +210,9 @@
 							<!--map-holder-->
 							<div class="map-holder">
 							
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>							
-<div id="map2" style="width:100%; height:565px"></div>
+
+							
+
 <style>
 .ymaps-b-placemark__top,
 .ymaps-b-placemark__bottom,
@@ -533,147 +538,122 @@ label.closest(".ymaps-point-overlay.active").removeClass("active");
 			<!--end footer-->
 			<div class="footer-decor">&nbsp;</div>
 		</div>
-		<!--end footer-->
+		<!--end footer-->		
 		
 		
-		
-		
-	<!--POPUP-PIZZARIASELECT-->	
-	<!--asvpopup-body-->
-	<div class="asvpopup-body" id="popup2">
-		<!--asvpopup-grandcolumn-->
-		<div class="asvpopup-grandcolumn">
-		
-		
-			<!--asvpopup-large-->
-			<div class="asvpopup-large popup_message">
-			
-				<a href="" class="button-close">&nbsp;</a>
-				
-				<!--asvpopup-tabs-holder-->
-				<div class="asvpopup-tabs-holder">
-				
-					<div id="tabs">
-						  <ul>
-							<li><a href="#tabs-1">Показать на карте</a></li>
-							<li><a href="#tabs-2">Отобразить списком</a></li>
-						  </ul>
-						  <!--tabs-1-->
-						  <div id="tabs-1">								
-							<!--map-holder-->
-							<div class="map-holder">
-								<div id="map2"></div>
-	
+		<!--POPUP-PIZZARIA-SELECT-->	
+		<div class="asvpopup-body" id="popup8">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-tabs-holder-->
+					<div class="asvpopup-tabs-holder">				
+						<div id="tabs">
+							  <ul>
+								<li><a href="#tabs-1">Показать на карте</a></li>
+								<li><a href="#tabs-2">Отобразить списком</a></li>
+							  </ul>
+							  <!--tabs-1-->
+							  <div id="tabs-1">								
+								<!--map-holder-->
+								<div class="map-holder">
+									<div id="map2"></div>	
+								</div>
+								<!--end map-holder-->							
 							</div>
-							<!--end map-holder-->							
-						</div>
-						<!-- end tabs-1-->						
-						
-						<!--tabs-2-->
-						  <div id="tabs-2">						  
-
-							<!--pomodoro-adress-list-->
-							<div class="pomodoro-adress-list">
-								<p class="heading-h3">Название города</p>
-								<!--pomodoro-adress-->
-								<div class="pomodoro-adress">
-									<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
-									<p class="pa-city">Домодедово</p>
-									<p class="pa-adress">
-										ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
-										<span class="pa-time">10:00 — 22:00</span>
-									</p>									
-									<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+							<!-- end tabs-1-->						
+							
+							<!--tabs-2-->
+							  <div id="tabs-2">
+								<!--pomodoro-adress-list-->
+								<div class="pomodoro-adress-list">
+									<p class="heading-h3">Название города</p>
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 123-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
 								</div>
-								<!--end pomodoro-adress-->
-								<!--pomodoro-adress-->
-								<div class="pomodoro-adress">
-									<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
-									<p class="pa-city">Домодедово</p>
-									<p class="pa-adress">
-										ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
-										<span class="pa-time">10:00 — 22:00</span>
-									</p>									
-									<p class="pa-tel">+7 (495) 123-00-00, доб. 23</p>									
-								</div>
-								<!--end pomodoro-adress-->
-								<!--pomodoro-adress-->
-								<div class="pomodoro-adress">
-									<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
-									<p class="pa-city">м. Проспект Мира</p>
-									<p class="pa-adress">
-										ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
-										<span class="pa-time">10:00 — 22:00</span>
-									</p>									
-									<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
-								</div>
-								<!--end pomodoro-adress-->
-								<!--pomodoro-adress-->
-								<div class="pomodoro-adress">
-									<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
-									<p class="pa-city">м. Проспект Мира</p>
-									<p class="pa-adress">
-										ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
-										<span class="pa-time">10:00 — 22:00</span>
-									</p>									
-									<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
-								</div>
-								<!--end pomodoro-adress-->
-							</div>
-							<!--end pomodoro-adress-list-->							
-						 </div>
-						 <!--end tabs-2-->
-					</div>					
-					
+								<!--end pomodoro-adress-list-->							
+							 </div>
+							 <!--end tabs-2-->
+						</div>					
+					</div>
+					<!--end asvpopup-tabs-holder-->			
 				</div>
-				<!--end asvpopup-tabs-holder-->			
-				
-				
-			</div>
-			<!--end asvpopup-large-->
-			
-		</div>	
-		<!--end asvpopup-grandcolumn-->	
-	</div>
-	<!--end asvpopup-body-->
-	<!--/POPUP-PIZZARIASELECT-->		
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-PIZZARIA-SELECT-->	
 	
 
-	<!--POPUP-TOBASKET-->	
-	<!--asvpopup-body-->
-	<div class="asvpopup-body" id="popup1">
-		<!--asvpopup-grandcolumn-->
-		<div class="asvpopup-grandcolumn">
-		
-		
-			<!--asvpopup-small-->
-			<div class="asvpopup-small popup_message">
-			
-				<a href="" class="button-close">&nbsp;</a>
-				
-				<!--asvpopup-ins-->
-				<div class="asvpopup-ins">					
-
-					<p class="text-align-center bold">
-							Товар добавлен в корзину
-					</p>
-					<p class="text-align-center">
-						<a href="" class="bt-mid bt-red bt-auto">Перейти в корзину</a>
-						<a href="" class="bt-mid bt-red bt-auto">Продолжить покупки</a>
-					</p>
-					</div>					
-					
+		<!--POPUP-TOBUSKET-->	
+		<div class="asvpopup-body" id="popup1">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-small-->
+				<div class="asvpopup-small popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">
+						<p class="text-align-center bold">
+								Товар добавлен в корзину
+						</p>
+						<p class="text-align-center">
+							<a href="" class="bt-mid bt-red bt-auto">Перейти в корзину</a>
+							<a href="" class="bt-mid bt-red bt-auto">Продолжить покупки</a>
+						</p>
+						</div>					
+					</div>
+					<!--end asvpopup-ins-->					
 				</div>
-				<!--end asvpopup-ins-->				
-				
-			</div>
-			<!--end asvpopup-small-->
-			
-		</div>	
-		<!--end asvpopup-grandcolumn-->	
-	</div>
-	<!--end asvpopup-body-->
-	<!--/POPUP-TOBASKET-->	
+				<!--end asvpopup-small-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-TOBUSKET-->	
 	
 	</body>
 </html>
