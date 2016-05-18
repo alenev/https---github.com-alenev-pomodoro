@@ -16,7 +16,7 @@
 		<link href="css/print.css" rel="stylesheet" media="print">
 		
 		<!--jquery-->
-		<script src="js/jquery-1.12.0.min.js"></script>		
+		<script src="js/jquery-1.12.0.min.js"></script>	
 		<!--end  jquery-->
 		
 		<!-- 05 2016  -->
@@ -34,7 +34,7 @@
 		  });
 		</script>
 		<!--end tabs-->
-		
+
 		<!--scrolltotop-->
 		<script src="js/jquery.scrollToTop.min.js"></script>
 		<script type="text/javascript">
@@ -56,7 +56,7 @@
 
 
 	<body>
-	
+
 		<!--scroll-to-top-->
 		<a href="#top" id="toTop">&nbsp;</a>
 		<!--end scroll-to-top-->
@@ -131,15 +131,24 @@
 					<a href="" class="header-basket">						
 						<dl>
 						  <dt>Кол-во:</dt>
-						   <dd class="basket-kolvo">6</dd>
+						   <dd class="basket-kolvo">21</dd>
 						  <dt>Сумма:</dt>
-						   <dd class="basket-sum">1 909</dd>
+						   <dd class="basket-sum">6 937</dd>
 						</dl>
 						<!--p>
 							Корзина пуста
 							<span>Сделать заказ!</span>
 						</p-->
-						<div class="spaser"></div>									
+						<div class="spaser"></div>	
+<ul>
+<li data-price="312" data-quantity="4" data-id="1" data-sale="0"></li>
+<li data-price="312" data-quantity="4" data-id="2" data-sale="0"></li>
+<li data-price="312" data-quantity="4" data-id="3" data-sale="0"></li>
+<li data-price="312" data-quantity="4" data-id="4" data-sale="0"></li>
+<li data-price="312" data-quantity="4" data-id="5" data-sale="0"></li>
+<li data-price="697" data-quantity="1" data-id="6" data-sale="1"></li>
+</ul>	
+						
 					</a>
 				</div>
 				<!--end header-col3-->
@@ -189,8 +198,11 @@
 				</ul-->
 				<!--end gradusnik-->
 				
+				
+				
 				<!--tabs-holder-->
-				<div class="tabs-holder">
+				<div class="tabs-holder">				
+				
 				
 					<div id="tabs">
 						  <ul>
@@ -198,7 +210,20 @@
 							<li><a href="#tabs-2">Отобразить списком</a></li>
 						  </ul>
 						  <!--tabs-1-->
-						  <div id="tabs-1">							
+						  <div id="tabs-1">
+
+
+				<a>popup1. Товар добавлен в корзину</a><br>
+				<a>popup2. Выберите город</a><br>
+				<a>popup3. JS отключен</a><br>
+				<a>popup4. Такой товар уже есть в корзине. Удалить и выберите снова?</a><br>
+				<a>popup5. Окно для акций. Сначала выберите пиццу</a><br>
+				<a>popup6. Товары удалены из корзины</a><br>
+				<a>popup7. Обратный звонок</a><br>
+				<a>popup8. Выберите пиццерию (с флажками)</a>
+				<br>
+				<br>
+				<br>						  
 							
 							<!--map-holder-->
 							<div class="map-holder">
@@ -232,10 +257,10 @@
 										Города:
 									</dt>
 									<dd>
-										<a href="">Москва</a>
-										<a href="" class="region-active">Саратов</a>
-										<a href="">Воронеж</a>
-										<a href="">Краснодар</a>
+										<a data-id="1" data-region="region1">Москва</a>
+										<a data-id="2" data-region="region2" class="region-active">Саратов</a>
+										<a data-id="3" data-region="region3">Воронеж</a>
+										<a data-id="4" data-region="region4">Краснодар</a>
 									</dd>
 								</dl>
 								<!--end pomodoro-region-->
@@ -246,18 +271,18 @@
 										Московская область:
 									</dt>
 									<dd>
-										<a href="">Александров</a>
-										<a href="">Балашиха</a>
-										<a href="">Бирюлево</a>
-										<a href="">Видное</a>
-										<a href="">Домодедово</a>
-										<a href="">Мытищи</a>
-										<a href="">Пушкино</a>
-										<a href="">Сергиев-Посад</a>
-										<a href="">Реутов</a>
-										<a href="">Фрязино</a>
-										<a href="">Фрязево</a>
-										<a href="">Химки</a>
+										<a data-id="5" data-region="region1">Александров</a>
+										<a data-id="6" data-region="region2">Балашиха</a>
+										<a data-id="7" data-region="region3">Бирюлево</a>
+										<a data-id="8" data-region="region4">Видное</a>
+										<a data-id="9" data-region="region5">Домодедово</a>
+										<a data-id="10" data-region="region6">Мытищи</a>
+										<a data-id="11" data-region="region7">Пушкино</a>
+										<a data-id="12" data-region="region8">Сергиев-Посад</a>
+										<a data-id="13" data-region="region9">Реутов</a>
+										<a data-id="14" data-region="region10">Фрязино</a>
+										<a data-id="15" data-region="region11">Фрязево</a>
+										<a data-id="16" data-region="region12">Химки</a>
 									</dd>
 								</dl>
 								<!--end pomodoro-region-->
@@ -411,6 +436,190 @@
 		
 		
 		
+		<!--POPUP-TOBUSKET-->	
+		<div class="asvpopup-body" id="popup1">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-small-->
+				<div class="asvpopup-small popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">
+						<p class="text-align-center bold">
+								Товар добавлен в корзину
+						</p>
+						<p class="text-align-center">
+							<a href="" class="bt-mid bt-red bt-auto">Перейти в корзину</a>
+							<a href="" class="bt-mid bt-red bt-auto">Продолжить покупки</a>
+						</p>
+						</div>					
+					</div>
+					<!--end asvpopup-ins-->					
+				</div>
+				<!--end asvpopup-small-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-TOBUSKET-->
+		
+		
+		
+		<!--POPUP-SITY-SELECT-->
+		<div class="asvpopup-body" id="popup2">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Выберите город</p>				
+								<!--pomodoro-region-list-->
+								<div class="pomodoro-region-list">
+									<!--pomodoro-region-->
+									<dl class="pomodoro-region">
+										<dt>
+											Города:
+										</dt>
+										<dd>
+											<a data-id="1" data-region="region1">Москва</a>
+											<a data-id="2" data-region="region2" class="region-active">Саратов</a>
+											<a data-id="3" data-region="region3">Воронеж</a>
+											<a data-id="4" data-region="region4">Краснодар</a>
+										</dd>
+									</dl>
+									<!--end pomodoro-region-->
+									<div class="spaser"></div>
+									<!--pomodoro-region-->
+									<dl class="pomodoro-region">
+										<dt>
+											Московская область:
+										</dt>
+										<dd>
+											<a data-id="5" data-region="region1">Александров</a>
+											<a data-id="6" data-region="region2">Балашиха</a>
+											<a data-id="7" data-region="region3">Бирюлево</a>
+											<a data-id="8" data-region="region4">Видное</a>
+											<a data-id="9" data-region="region5">Домодедово</a>
+											<a data-id="10" data-region="region6">Мытищи</a>
+											<a data-id="11" data-region="region7">Пушкино</a>
+											<a data-id="12" data-region="region8">Сергиев-Посад</a>
+											<a data-id="13" data-region="region9">Реутов</a>
+											<a data-id="14" data-region="region10">Фрязино</a>
+											<a data-id="15" data-region="region11">Фрязево</a>
+											<a data-id="16" data-region="region12">Химки</a>
+										</dd>
+									</dl>
+									<!--end pomodoro-region-->
+									<div class="spaser"></div>
+								</div>
+								<!--end pomodoro-region-list-->					
+					</div>
+					<!--end asvpopup-ins-->				
+				</div>
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-SITY-SELECT-->
+
+
+	
+		<!--POPUP NO-Javascript-->
+		<div class="asvpopup-body open show" id="popup3">		
+			<div class="asvpopup-grandcolumn">
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Javascript отключен!</p>
+						<p class="text-align-center">
+							Этот сайт использует <strong>javascript</strong> для формирования заказов.<br>
+							Браузер, в котором сейчас вы читаете это сообщение, не поддерживает javascript или javascript выключен.<br>
+							Пожалуйста, включите javascript в вашем браузере или установите браузер, который поддерживает javascript, например
+							<a target="_blank" href="https://www.google.ru/chrome/browser/desktop/" title="">Chrome</a>
+						</p>					
+						<div class="spaser"></div>
+					</div>					
+				</div>				
+			</div>			
+		</div>	
+		<!--/POPUP NO-Javascript-->
+
+
+		<!--POPUP-HAVE-in-BUSKET-->
+		<div class="asvpopup-body" id="popup4">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">			
+				<!--asvpopup-small-->
+				<div class="asvpopup-small popup_message">				
+					<a class="button-close">&nbsp;</a>					
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">
+						<p class="text-align-center bold">
+								Такой товар уже есть в корзине.<br>
+								Удалить его из корзины чтобы добавить его с другими опциями или ингридиентами?
+						</p>
+						<p class="text-align-center">
+							<a  class="bt-mid bt-red bt-auto">Да</a>
+							<a  class="bt-mid bt-red bt-auto">Нет</a>
+						</p>				
+					</div>
+					<!--end asvpopup-ins-->						
+				</div>
+				<!--end asvpopup-small-->				
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-HAVE-in-BUSKET-->	
+		
+		
+		<!--POPUP ACTION-BEFORE-->
+		<div class="asvpopup-body" id="popup5">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-small-->
+				<div class="asvpopup-small popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">
+						<p class="text-align-center bold">
+							Для заказа пиццы за 179 руб. нужно сначала заказать 2 любые пиццы из доступных вариантов.
+						</p>						
+					</div>
+					<!--end asvpopup-ins-->					
+				</div>
+				<!--end asvpopup-small-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP ACTION-BEFORE-->
+
+
+
+		<!--POPUP-SITYCHANGE-->	
+		<div class="asvpopup-body" id="popup6">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Некоторые товары удалены из корзины</p>
+						<p class="text-align-center">
+							Из корзины были удалены товары недоступные к заказу в выбранном городе.
+						</p>
+					</div>
+					<!--end asvpopup-ins-->				
+				</div>
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--/POPUP-SITYCHANGE-->
+	
+	
+	
 		<!--POPUP-RECALL-->	
 		<div class="asvpopup-body" id="popup7">
 			<!--asvpopup-grandcolumn-->
@@ -491,7 +700,95 @@
 			<!--end asvpopup-grandcolumn-->	
 		</div>
 		<!--END POPUP-RECALL-->	
-	
+		
+		
+		<!--POPUP-PIZZARIA-SELECT-->	
+		<div class="asvpopup-body" id="popup8">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-tabs-holder-->
+					<div class="asvpopup-tabs-holder">				
+						<div id="tabs">
+							  <ul>
+								<li><a href="#tabs-1">Показать на карте</a></li>
+								<li><a href="#tabs-2">Отобразить списком</a></li>
+							  </ul>
+							  <!--tabs-1-->
+							  <div id="tabs-1">								
+								<!--map-holder-->
+								<div class="map-holder">
+									<div id="map2"></div>	
+								</div>
+								<!--end map-holder-->							
+							</div>
+							<!-- end tabs-1-->							
+							<!--tabs-2-->
+							  <div id="tabs-2">
+								<!--pomodoro-adress-list-->
+								<div class="pomodoro-adress-list">
+									<p class="heading-h3">Название города</p>
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 123-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+								</div>
+								<!--end pomodoro-adress-list-->							
+							 </div>
+							 <!--end tabs-2-->
+						</div>					
+					</div>
+					<!--end asvpopup-tabs-holder-->			
+				</div>
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-PIZZARIA-SELECT-->
+		
+		
 		
 	</body>
 </html>

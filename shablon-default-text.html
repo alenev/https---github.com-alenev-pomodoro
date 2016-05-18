@@ -19,6 +19,7 @@
 		
 		<!-- 05 2016  -->
 		<script src="js/jquery.cookie.js"></script>
+		<script src="js/UI.js"></script>
 		<!-- END 05 2016  -->
 
 		<!--scrolltotop-->
@@ -92,7 +93,7 @@
 						<span class="geo-name">Ваш город:</span>
 						<span class="geo-city">Железнодорожный</span>
 						<span class="geo-region">Московская обл.</span>						
-						<a href="" class="geo-change">Выбрать<br>другой город </a>
+						<a class="geo-change">Выбрать<br>другой город </a>
 					</div>
 				</div>
 				<!--end header-col1-->
@@ -112,7 +113,7 @@
 				<!--end header-col2-->
 				<!--header-col3-->
 				<div class="header-col3">
-					<a href="" class="header-recall">Обратный звонок</a>	
+					<a class="header-recall">Обратный звонок</a>	
 					<a href="" class="header-basket">						
 						<dl>
 						  <dt>Кол-во:</dt>
@@ -215,8 +216,8 @@
 				<div class="footer-col1">
 					<p class="footer-socseti-title">Мы в социальных сетях:</p>
 					<ul class="menu-socseti">
-						<li><a href="" class="ms-vk">&nbsp;</a></li>
-						<li><a href="" class="ms-fb">&nbsp;</a></li>
+						<li><a href="https://vk.com/pizzapomodoro_sushiszen" class="ms-vk" target="_blank">&nbsp;</a></li>
+						<li><a href="https://www.facebook.com/pizzapomodorosushidzen" class="ms-fb" target="_blank">&nbsp;</a></li>
 						<li><a href="" class="ms-tw">&nbsp;</a></li>
 						<li><a href="" class="ms-inst">&nbsp;</a></li>	
 					</ul>
@@ -280,6 +281,170 @@
 			<div class="footer-decor">&nbsp;</div>
 		</div>
 		<!--end footer-->
+		
+		
+		
+		<!--POPUP NO-Javascript-->
+		<div class="asvpopup-body open show" id="popup3">		
+			<div class="asvpopup-grandcolumn">
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Javascript отключен!</p>
+						<p class="text-align-center">
+							Этот сайт использует <strong>javascript</strong> для формирования заказов.<br>
+							Браузер, в котором сейчас вы читаете это сообщение, не поддерживает javascript или javascript выключен.<br>
+							Пожалуйста, включите javascript в вашем браузере или установите браузер, который поддерживает javascript, например
+							<a target="_blank" href="https://www.google.ru/chrome/browser/desktop/" title="">Chrome</a>
+						</p>					
+						<div class="spaser"></div>
+					</div>					
+				</div>				
+			</div>			
+		</div>	
+		<!--/POPUP NO-Javascript-->
+		
+	
+		<!--POPUP-SITY-SELECT-->
+		<div class="asvpopup-body" id="popup2">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Выберите город</p>				
+								<!--pomodoro-region-list-->
+								<div class="pomodoro-region-list">
+									<!--pomodoro-region-->
+									<dl class="pomodoro-region">
+										<dt>
+											Города:
+										</dt>
+										<dd>
+											<a data-id="1" data-region="region1">Москва</a>
+											<a data-id="2" data-region="region2" class="region-active">Саратов</a>
+											<a data-id="3" data-region="region3">Воронеж</a>
+											<a data-id="4" data-region="region4">Краснодар</a>
+										</dd>
+									</dl>
+									<!--end pomodoro-region-->
+									<div class="spaser"></div>
+									<!--pomodoro-region-->
+									<dl class="pomodoro-region">
+										<dt>
+											Московская область:
+										</dt>
+										<dd>
+											<a data-id="5" data-region="region1">Александров</a>
+											<a data-id="6" data-region="region2">Балашиха</a>
+											<a data-id="7" data-region="region3">Бирюлево</a>
+											<a data-id="8" data-region="region4">Видное</a>
+											<a data-id="9" data-region="region5">Домодедово</a>
+											<a data-id="10" data-region="region6">Мытищи</a>
+											<a data-id="11" data-region="region7">Пушкино</a>
+											<a data-id="12" data-region="region8">Сергиев-Посад</a>
+											<a data-id="13" data-region="region9">Реутов</a>
+											<a data-id="14" data-region="region10">Фрязино</a>
+											<a data-id="15" data-region="region11">Фрязево</a>
+											<a data-id="16" data-region="region12">Химки</a>
+										</dd>
+									</dl>
+									<!--end pomodoro-region-->
+									<div class="spaser"></div>
+								</div>
+								<!--end pomodoro-region-list-->					
+					</div>
+					<!--end asvpopup-ins-->				
+				</div>
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-SITY-SELECT-->
+	
+	
+		<!--POPUP-RECALL-->	
+		<div class="asvpopup-body" id="popup7">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-small-->
+				<div class="asvpopup-small popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-ins-->
+					<div class="asvpopup-ins">					
+						<p class="heading-h4 text-align-center">Обратный звонок</p>
+						<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-recall">						
+							<fieldset class="f-standart">
+								<!--error-
+								<div class="form-message fm-no">пример вывода сообщения с ошибкой, этот блок ставится в любое место</div>
+								<!--end error-->
+								<!--error
+								<div class="form-message fm-yes">пример вывода сообщения без ошибки, этот блок ставится в любое место</div>
+								<!--end error-->									
+								<div class="form_line">
+									<div class="f-leftcolumn">
+										<label for="re-name">Имя:</label>
+									</div>
+									<div class="f-rightcolumn">
+										<input type="text" name="re-name" id="re-name"  maxlength="200" class="required f-s" value="">
+										<div class="error_text form-message fm-no">Введите имя.</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="f-leftcolumn">
+										<label for="re-tel">Телефон:</label>
+									</div>
+									<div class="f-rightcolumn">
+										<input type="text" name="re-tel" id="re-tel" maxlength="200"  class="f-s required" value=""  >
+										<div class="error_text form-message fm-no">Введите номер контактного телефона.</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="f-leftcolumn">
+										<label for="re-time">Удобное время:</label>
+									</div>
+									<div class="f-rightcolumn">
+										<input type="text" name="re-time" id="re-time"  maxlength="100" class="f-s" value="">
+									</div>
+								</div>
+								<div>
+									<div class="f-leftcolumn">	
+										&nbsp;
+									</div>
+									<div class="f-rightcolumn checkb-radio">
+										<label>
+											<input type="checkbox" name="recall-now" value="recall-now"> <span class="bold">Позвонить сейчас</span> 
+										</label>									
+									</div>
+								</div>								
+							</fieldset>									
+							<fieldset class="f-standart">									
+								<div>
+									<div class="f-leftcolumn">
+										&nbsp;
+									</div>
+									<div class="f-rightcolumn">	
+										<input type="submit" value="Перезвоните мне!" class="bt-base bt-red bt-200x56">											
+									</div>
+								</div>
+							</fieldset>							
+						</form>	
+						<div class="form-recall-send form-message fm-yes">
+							<p>
+								Ваш запрос отправлен.<br>
+								<span class="bold">Ближайшее время менеджер свяжется с вами!</span>
+							</p>
+						</div>
+					</div>
+					<!--end asvpopup-ins-->					
+				</div>
+				<!--end asvpopup-small-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-RECALL-->	
 		
 	</body>
 </html>
