@@ -2042,10 +2042,62 @@ background: #ccc;
     width: 100%;
 }
 	
+.ymaps-b-placemark__top,
+.ymaps-b-placemark__bottom,
+.ymaps-b-placemark__left,
+.ymaps-b-placemark__right  {
+  opacity: 0;
+}
+.ymaps-point-overlay.active {
+  z-index: 99999;
+}
+.contact_big_map--label {
+    background: #fff none repeat scroll 0 0;
+    border: 3px solid rgb(172, 0, 0);
+    border-radius: 5px;
+    float: left;
+    left: 15px;
+    padding: 10px;
+    top: -105px;
+    width: 250px;
+	position: absolute;
 	
-	
-	
-	
+}
+.ym_my_baloon {
+    position: relative;
+}
+.label_icon, .label_info {
+    float: left;
+}
+.ym_my_baloon .placemark{
+   background: rgba(0, 0, 0, 0) url("../i-all/ico-for-map.png") no-repeat scroll 0 0;
+    height: 38px;
+    left: -5px;
+    position: absolute;
+    top: -35px;
+    width: 30px;
+}
+.ym_my_baloon:hover .placemark,
+.ym_my_baloon.active .placemark  {
+    background: url("../i-all/ico-for-map-hover.png") 0 0 no-repeat;
+}
+.label_info {
+text-align: left;
+}
+.ymaps-2-1-39-placemark-overlay ymaps,
+.ym_my_baloon {
+background: none !important;
+}
+.ym_my_baloon  .contact_big_map--label {
+display: none;
+} 
+.ym_my_baloon.active .contact_big_map--label {
+display: block;
+}
+.ymaps-2-1-39-placemark-overlay ymaps.ymaps-2-1-39-default-cluster {
+    background-image: url("https://api-maps.yandex.ru/2.0.43/images/c2784ae9ffc628d8a84f28dec13c48cd.png") !important;
+    background-size: 100% 100% !important;
+}
 	
 	
 	
