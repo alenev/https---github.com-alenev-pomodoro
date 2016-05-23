@@ -891,7 +891,7 @@ function map1_init(mapID) {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
                     center: [50.40239488870546,30.53268999999996],
-                    zoom: 11
+                    zoom: 8
                 }); 
 
 var myBalloonContentLayout = ymaps.templateLayoutFactory.createClass("<p>$[[options.contentBodyLayout]]</p>");
@@ -1166,13 +1166,17 @@ $(this).closest(".ym_my_baloon").removeClass("active");
 $(this).closest(".ymaps-2-1-39-places-pane").removeClass("open");
 });
 
-$("body").on('click', '.ym_my_baloon .factory_selector', function(){
+$("body").on('click', '.factory_selector', function(){
+if ($(this).hasClass("list")){
+var factory_id = $(this).attr("data-factory");
+}else{
 var factory_id = $(this).closest(".ym_my_baloon").attr("data-factory");
 $(this).closest(".ym_my_baloon").removeClass("active");
 $(this).closest(".ymaps-2-1-39-places-pane").removeClass("open");
+}
 popup_hide();
 $(".pizza_factory_adress").text(factory_id);
-alert("msg:26 data-factory="+factory_id+"");
+alert("msg:27 data-factory="+factory_id+"");
 });
 
 });
