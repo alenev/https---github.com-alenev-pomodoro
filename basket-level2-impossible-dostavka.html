@@ -21,6 +21,10 @@
 		<script src="js/jquery.cookie.js"></script>
 		<!-- END 05 2016  -->
 		
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		
+		<script src="js/UI.js"></script>
+		
 		<!--tabs-->
 		<script src="plugins/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 		<link href="plugins/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
@@ -285,7 +289,7 @@
 											<span class="bold">Пиццерия самовывоза:</span>
 										</div>
 										<div class="f-rightcolumn">
-											<a class="bt-base bt-green bt-200x56">Выбрать пиццерию</a>
+											<a class="factory_select bt-base bt-green bt-200x56">Выбрать пиццерию</a>
 										</div>
 									</div>
 									<div>
@@ -293,7 +297,7 @@
 											<span class="bold">Пиццерия самовывоза:</span>
 										</div>
 										<div class="f-rightcolumn">
-											<span class="bold">ул. Мира, дом 12, сеть супермаркетов &laquo;Пятерочка&raquo;</span> 
+											<span class="bold pizza_factory_adress">ул. Мира, дом 12, сеть супермаркетов &laquo;Пятерочка&raquo;</span> 
 											<a class="bt-small bt-green bt-auto">Выбрать другую пиццерию</a>
 										</div>
 									</div>
@@ -548,6 +552,95 @@
 			<div class="footer-decor">&nbsp;</div>
 		</div>
 		<!--end footer-->
+
+		<!--POPUP-PIZZARIA-SELECT-->	
+		<div class="asvpopup-body" id="popup8">
+			<!--asvpopup-grandcolumn-->
+			<div class="asvpopup-grandcolumn">		
+				<!--asvpopup-large-->
+				<div class="asvpopup-large popup_message">			
+					<a class="button-close">&nbsp;</a>				
+					<!--asvpopup-tabs-holder-->
+					<div class="asvpopup-tabs-holder">				
+						<div id="tabs">
+							  <ul>
+								<li><a href="#tabs-1">Показать на карте</a></li>
+								<li><a href="#tabs-2">Отобразить списком</a></li>
+							  </ul>
+							  <!--tabs-1-->
+							  <div id="tabs-1">								
+								<!--map-holder-->
+								<div class="map-holder">
+								
+<div id="map1" class="map_container" style="width:100%; height:515px"></div>								
+								</div>
+								<!--end map-holder-->							
+							</div>
+							<!-- end tabs-1-->						
+							
+							<!--tabs-2-->
+							  <div id="tabs-2">
+								<!--pomodoro-adress-list-->
+								<div class="pomodoro-adress-list">
+									<p class="heading-h3">Название города</p>
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">Домодедово</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 123-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+									<!--pomodoro-adress-->
+									<div class="pomodoro-adress">
+										<a href="" class="bt-mid bt-red bt-110x35">Выбрать</a>
+										<p class="pa-city">м. Проспект Мира</p>
+										<p class="pa-adress">
+											ул. Мира , д. 30, сеть супермаркетов &laquo;Пятерочка&raquo;;
+											<span class="pa-time">10:00 — 22:00</span>
+										</p>									
+										<p class="pa-tel">+7 (495) 000-00-00, доб. 23</p>									
+									</div>
+									<!--end pomodoro-adress-->
+								</div>
+								<!--end pomodoro-adress-list-->							
+							 </div>
+							 <!--end tabs-2-->
+						</div>					
+					</div>
+					<!--end asvpopup-tabs-holder-->			
+				</div>
+				<!--end asvpopup-large-->			
+			</div>	
+			<!--end asvpopup-grandcolumn-->	
+		</div>
+		<!--END POPUP-PIZZARIA-SELECT-->	
+
 		
 	</body>
 </html>
