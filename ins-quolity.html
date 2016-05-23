@@ -194,12 +194,20 @@
 								
 								<fieldset class="f-standart">
 									<!--error-->
-										<div class="form-message fm-no">пример вывода сообщения с ошибкой, этот блок ставится в любое место</div>
+									<div class="form-message fm-no">Не все обязательные поля формы заполнены</div>
 									<!--end error-->
 									<!--error-->
-										<div class="form-message fm-yes">пример вывода сообщения без ошибки, этот блок ставится в любое место</div>
+									<div class="form-message fm-yes">
+										Ваши данные успешно отправлены!<br>
+										Благодарим за обращение.<br>
+										В случае необходимости менеджеры компании свяжутся с вами для уточнения деталей.
+									</div>
 									<!--end error-->
-									<div>
+									
+									<!--error-->
+									<div class="error">Выберите причину обращения</div>
+									<!--end error-->
+									<div>										
 										<div class="f-leftcolumn">	
 											Причина обращения:
 										</div>
@@ -278,7 +286,7 @@
 												</select>																								
 										</div>
 									</div>
-									<div>
+									<div>										
 										<div class="f-leftcolumn">
 											<label for="quolity-time">Время покупки:</label>
 										</div>
@@ -304,6 +312,9 @@
 											<span class="f-comment">Если покупали на точке продаж</span>
 										</div>
 									</div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-comm">Сообщение:</label>
@@ -319,7 +330,10 @@
 									</div>									
 								</fieldset>
 								
-								<fieldset class="f-standart">									
+								<fieldset class="f-standart">
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-name">Имя:</label>
@@ -328,6 +342,9 @@
 											<input type="text" name="quolity-name" id="quolity-name"  maxlength="200" class="f-s" value="">
 										</div>
 									</div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-tel">Телефон:</label>
@@ -336,6 +353,9 @@
 											<input type="text" name="quolity-tel" id="quolity-tel" maxlength="200"  class="f-s" value="">
 										</div>
 									</div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-email">E-mail:</label>

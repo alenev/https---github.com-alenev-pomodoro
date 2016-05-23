@@ -788,6 +788,10 @@ fieldset.f-standart .checkb-radio .f-comment-block {
 	margin-bottom: 0;
 }
 
+.form-quolity fieldset.f-standart div.error  {
+	margin: 0 0 0 170px;
+}
+
 /*	-------------------------
 	FORMS:  .form-dopingr
 	-------------------------	*/

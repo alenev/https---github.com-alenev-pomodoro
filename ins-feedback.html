@@ -186,20 +186,29 @@
 								
 								<fieldset class="f-standart">									
 									<!--error-->
-										<div class="form-message fm-no">пример вывода сообщения с ошибкой, этот блок ставится в любое место</div>
+									<div class="form-message fm-no">Пожалуйста, заполните все поля формы</div>
 									<!--end error-->
 									<!--error-->
-										<div class="form-message fm-yes">пример вывода сообщения без ошибки, этот блок ставится в любое место</div>
+									<div class="form-message fm-yes">
+										Благодарим за обращение!<br>
+										Ваши данные успешно отправлены
+									</div>
 									<!--end error-->
-									<div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
+									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-name">Имя:</label>
 										</div>
-										<div class="f-rightcolumn">
+										<div class="f-rightcolumn">											
 											<input type="text" name="feed-name" id="feed-name"  maxlength="200" class="f-s" value="">
 										</div>
 									</div>
-									<div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
+									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-tel">Телефон:</label>
 										</div>
@@ -207,7 +216,10 @@
 											<input type="text" name="feed-tel" id="feed-tel" maxlength="200"  class="f-s" value="">
 										</div>
 									</div>
-									<div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
+									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-email">E-mail:</label>
 										</div>
@@ -215,7 +227,10 @@
 											<input type="text" name="feed-email" id="feed-email" maxlength="200"  class="f-s" value="">
 										</div>
 									</div>
-									<div>
+									<!--error-->
+									<div class="error">Необходимо заполнить</div>
+									<!--end error-->
+									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-comm">Сообщение:</label>
 										</div>
