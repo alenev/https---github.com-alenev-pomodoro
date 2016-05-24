@@ -18,6 +18,7 @@
 		<!--end  jquery-->
 
 		<!-- 05 2016  -->
+		<script src="js/UI.js"></script>
 		<script src="js/jquery.cookie.js"></script>
 		<!-- END 05 2016  -->
 		
@@ -184,7 +185,7 @@
 					<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-universal">
 								
 								
-								<fieldset class="f-standart">									
+																	
 									<!--error-->
 									<div class="form-message fm-no">Пожалуйста, заполните все поля формы</div>
 									<!--end error-->
@@ -194,50 +195,67 @@
 										Ваши данные успешно отправлены
 									</div>
 									<!--end error-->
+									
+								<div class="form-body">	
+									<fieldset class="f-standart">
+									
+								<div class="form_line">		
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
-									<div>										
+									<div>				
 										<div class="f-leftcolumn">
 											<label for="feed-name">Имя:</label>
 										</div>
 										<div class="f-rightcolumn">											
-											<input type="text" name="feed-name" id="feed-name"  maxlength="200" class="f-s" value="">
+											<input type="text" name="feed-name" id="feed-name"  maxlength="200" class="required f-s" value="">
 										</div>
 									</div>
+								</div>	
+									
+								<div class="form_line">		
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-tel">Телефон:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<input type="text" name="feed-tel" id="feed-tel" maxlength="200"  class="f-s" value="">
+											<input type="text" name="feed-tel" id="feed-tel" maxlength="200"  class="required f-s" value="">
 										</div>
 									</div>
+								</div>	
+								
+								
+								<div class="form_line">
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-email">E-mail:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<input type="text" name="feed-email" id="feed-email" maxlength="200"  class="f-s" value="">
+											<input type="text" name="feed-email" id="feed-email" maxlength="200"  class="required email f-s" value="">
 										</div>
 									</div>
+								</div>	
+								
+                                <div class="form_line">								
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>										
 										<div class="f-leftcolumn">
 											<label for="feed-comm">Сообщение:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<textarea name="feed-comm" id="feed-comm" cols="" rows="" maxlength="3000" class="f-xxl"></textarea>											
+											<textarea name="feed-comm" id="feed-comm" cols="" rows="" maxlength="3000" class="required required_textarea f-xxl"></textarea>											
 										</div>
-									</div>									
+									</div>	
+                                </div>
+									
 								</fieldset>
 								
 															
@@ -276,30 +294,11 @@
 										</p>
 									</div>						
 								</fieldset>
+							</div>		
+								
 							</form>	
 						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+												
 					
 				</div>
 				<!--end inspage-->

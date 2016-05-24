@@ -2145,6 +2145,11 @@ right: -5px;
 top: -5px;
 z-index: 99999;
 }
+.form-universal .fm-yes,
+.form-universal .fm-no {
+display: none;
+}
+
 	
 	
 	

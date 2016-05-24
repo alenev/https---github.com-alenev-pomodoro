@@ -972,7 +972,7 @@ form.form-profile {
 .form_line .error_text {
 display: none;
 }
-.form_line.error .error_text {
+.form_line.incorrect .error_text {
 display: block;
 font-size: 11px;
 width: 210px;

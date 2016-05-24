@@ -188,11 +188,11 @@ var filter_rus_phone = new RegExp(re1+re2,["i"]);
 function validate_region(){ 
 if (formid == 'checkout_form_table') {
 if ($("#checkout_form_table .order_region_button .info").hasClass("region_selected")) {
-$("#checkout_form_table .order_region_select").removeClass("error");
+$("#checkout_form_table .order_region_select").removeClass("incorrect");
 $("#checkout_form_table .order_region_select").addClass("complete");
 			  
 }else {
-$("#checkout_form_table .order_region_select").addClass("error");
+$("#checkout_form_table .order_region_select").addClass("incorrect");
 scroll_2first_error ();
 } 
 }else {
@@ -207,13 +207,13 @@ form.find(".required").each(function(i,el) {
 if(this.value == '') {
 	if ($(this).hasClass("hide")) { }else{					 
              $(this).closest(".form_line").removeClass("complete");
-		     $(this).closest(".form_line").addClass("error");
+		     $(this).closest(".form_line").addClass("incorrect");
 		     scroll_2first_error ();		
 	 }
 }
 else {	
     if ($(this).hasClass("hide")) { }else{			 
-		     $(this).closest(".form_line").removeClass("error");
+		     $(this).closest(".form_line").removeClass("incorrect");
 		     $(this).closest(".form_line").addClass("complete");
 
 	} 
@@ -227,12 +227,12 @@ form.find(".required_textarea").each(function(i,el) {
 if($(this).val() == '') {
 	if ($(this).hasClass("hide")) { }else{					 
              $(this).closest(".form_line").removeClass("complete");
-		     $(this).closest(".form_line").addClass("error");
+		     $(this).closest(".form_line").addClass("incorrect");
 		     scroll_2first_error ();		
 	 }
 }else {	
     if ($(this).hasClass("hide")) { }else{			 
-		     $(this).closest(".form_line").removeClass("error");
+		     $(this).closest(".form_line").removeClass("incorrect");
 		     $(this).closest(".form_line").addClass("complete");
 
 	} 
@@ -253,13 +253,13 @@ if($(this).val() == '') {
 		if (!filter.test(mail)) {
          if ($(this).hasClass("hide")) { }else{
 		$(this).closest(".form_line").removeClass("complete");
-        $(this).closest(".form_line").addClass("error");
+        $(this).closest(".form_line").addClass("incorrect");
          scroll_2first_error ();		 
 		                                }
 		}
 		else {
 		         if ($(this).hasClass("hide")) { }else{
-		$(this).closest(".form_line").removeClass("error");
+		$(this).closest(".form_line").removeClass("incorrect");
 		$(this).closest(".form_line").addClass("complete");
 		                               }
 		}
@@ -275,14 +275,14 @@ if($(this).val() == '') {
 		if (password_length < 6) {	
           if ($(this).hasClass("hide")) { }else{	 
 		$(this).closest(".form_line").removeClass("complete");
-        $(this).closest(".form_line").addClass("error");
+        $(this).closest(".form_line").addClass("incorrect");
          scroll_2first_error ();
              	 
 		   }
 		}
 		else {
 		if ($(this).hasClass("hide")) { }else{
-		$(this).closest(".form_line").removeClass("error");
+		$(this).closest(".form_line").removeClass("incorrect");
 		$(this).closest(".form_line").addClass("complete");
 		                               }
 		}
@@ -296,7 +296,7 @@ if($(this).val() == '') {
 		var password =  $(this).closest("form").find("input.password").val();	
 		if (password == repassword && password != '') {			
 		if ($(this).hasClass("hide")) { }else{
-		$(this).closest(".form_line").removeClass("error");
+		$(this).closest(".form_line").removeClass("incorrect");
 		$(this).closest(".form_line").addClass("complete");
 		                               }									  
 		}
@@ -304,7 +304,7 @@ if($(this).val() == '') {
 
 		if ($(this).hasClass("hide")) { }else{	 
 		$(this).closest(".form_line").removeClass("complete");
-        $(this).closest(".form_line").addClass("error");
+        $(this).closest(".form_line").addClass("incorrect");
          scroll_2first_error ();            	 
 		   }
 		}
@@ -326,12 +326,12 @@ return this.attr(name) !== undefined;
 		if (!filter_rus_phone.test(phone) || phone_length < 16 || phone == mask) {
         if ($(this).hasClass("hide")) { }else{
 		$(this).closest(".form_line").removeClass("complete");
-        $(this).closest(".form_line").addClass("error");
+        $(this).closest(".form_line").addClass("incorrect");
          scroll_2first_error ();		 		                                }
 		}
 		else {
 		if ($(this).hasClass("hide")) { }else{
-		$(this).closest(".form_line").removeClass("error");
+		$(this).closest(".form_line").removeClass("incorrect");
 		$(this).closest(".form_line").addClass("complete");
 		                               }
 		}
@@ -349,7 +349,7 @@ return this.attr(name) !== undefined;
 		var fail = 1;		
        
 		fail = 0;
-		form.find(".form_line.error").each(function(i,el) {
+		form.find(".form_line.incorrect").each(function(i,el) {
 		fail++;
 		});
 		if (fail == 0 ) { return true; } 	
@@ -378,6 +378,8 @@ $(".form-recall-send").show();
 }
 });
 /* END Отправка формы */
+
+
 
 
 if ($("#popup3").length > 0) {
@@ -1179,7 +1181,30 @@ $(".pizza_factory_adress").text(factory_id);
 alert("msg:27 data-factory="+factory_id+"");
 });
 
+
+
+/* ins-feedback */
+$("body").on('submit','.form-universal',function(){
+return false;
 });
+$(".form-universal .bt-base").on('click',function(){
+var form = $(this).closest(".form-body");
+if (validator(form)) {
+form.hide();
+form.closest("form").find(".fm-no").hide();
+form.closest("form").find(".fm-yes").show();
+/* Здесь отправляем данные формы*/
+}else{
+form.closest("form").find(".fm-no").show();
+}
+});
+/* END ins-feedback */
+
+
+});
+
+
+
 
 
 /* END Карта */
