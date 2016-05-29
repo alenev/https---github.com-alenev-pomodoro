@@ -18,6 +18,7 @@
 		<!--end  jquery-->
 
 		<!-- 05 2016  -->
+				<script src="js/UI.js"></script>
 		<script src="js/jquery.cookie.js"></script>
 		<!-- END 05 2016  -->
 		
@@ -190,7 +191,7 @@
 						Для того, чтобы оставить претензию или пожелание, пожалуйста, заполните форму ниже:
 					</p>                    
 					
-					<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-quolity">
+					<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-quolity" autocomplete="off">
 								
 								<fieldset class="f-standart">
 									<!--error-->
@@ -203,9 +204,14 @@
 										В случае необходимости менеджеры компании свяжутся с вами для уточнения деталей.
 									</div>
 									<!--end error-->
+								</fieldset>
+								
+								<div class="form-body">	
+								<fieldset class="f-standart">	
 									
+									<div class="form_line checkbox_group">	
 									<!--error-->
-									<div class="error">Выберите причину обращения</div>
+									<div class="error error_text">Выберите причину обращения</div>
 									<!--end error-->
 									<div>										
 										<div class="f-leftcolumn">	
@@ -213,26 +219,27 @@
 										</div>
 										<div class="f-rightcolumn checkb-radio">
 											<label>
-												<input type="checkbox" name="quolity-reason" value="qr-1"> <span class="bold">Качество продукции</span> 
+												<input type="checkbox" name="quolity-reason" value="qr-1" class="required_checkbox"> <span class="bold">Качество продукции</span> 
 											</label>
 											<label>
-												<input type="checkbox" name="quolity-reason" value="qr-2"> <span class="bold">Качество обслуживания</span> 
+												<input type="checkbox" name="quolity-reason" value="qr-2" class="required_checkbox"> <span class="bold">Качество обслуживания</span> 
 											</label>
 											<label>
-												<input type="checkbox" name="quolity-reason" value="qr-3"> <span class="bold">Доставка</span> 
+												<input type="checkbox" name="quolity-reason" value="qr-3" class="required_checkbox"> <span class="bold">Доставка</span> 
 											</label>
 											<label>
-												<input type="checkbox" name="quolity-reason" value="qr-4"> <span class="bold">Предложения и пожелания</span> 
+												<input type="checkbox" name="quolity-reason" value="qr-4" class="required_checkbox"> <span class="bold">Предложения и пожелания</span> 
 											</label>
 											<label>
-												<input type="checkbox" name="quolity-reason" value="qr-5"> <span class="bold">Другое</span> 
+												<input type="checkbox" name="quolity-reason" value="qr-5" class="required_checkbox"> <span class="bold">Другое</span> 
 											</label>
 										</div>
 									</div>
-								</fieldset>
+									</div>
+							  </fieldset>
 								<fieldset class="f-standart">
 									
-									<div>
+									<div class="form_line">
 										<div class="f-leftcolumn">
 											Дата покупки:
 										</div>
@@ -286,7 +293,8 @@
 												</select>																								
 										</div>
 									</div>
-									<div>										
+									
+									<div class="form_line">									
 										<div class="f-leftcolumn">
 											<label for="quolity-time">Время покупки:</label>
 										</div>
@@ -294,7 +302,7 @@
 											<input type="text" name="quolity-time" id="quolity-time"  maxlength="100" class="f-xs" value="">
 										</div>
 									</div>
-									<div>
+									<div class="form_line">
 										<div class="f-leftcolumn">
 											<label for="quolity-num">Номер заказа:</label>
 										</div>
@@ -303,7 +311,7 @@
 											<span class="f-comment">Если заказывали через сайт</span>
 										</div>
 									</div>
-									<div>
+									<div class="form_line">
 										<div class="f-leftcolumn">
 											<label for="quolity-adress">Адрес покупки:</label>
 										</div>
@@ -312,59 +320,68 @@
 											<span class="f-comment">Если покупали на точке продаж</span>
 										</div>
 									</div>
+									<div class="form_line">
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-comm">Сообщение:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<textarea name="quolity-comm" id="quolity-comm" cols="" rows="" maxlength="3000" class="f-xxl"></textarea>
+											<textarea name="quolity-comm" id="quolity-comm" cols="" rows="" maxlength="3000" class="f-xxl required required_textarea"></textarea>
 											<span class="f-comment-block">
 												Подробно опишите вашу ситуацию или тему.<br>
 												Если сообщение касается конкретного продавца, и вам известно его имя и фамилия,<br>
 												пожалуйста, укажите их.
 											</span>
 										</div>
-									</div>									
+									</div>	
+								   </div>	
 								</fieldset>
 								
 								<fieldset class="f-standart">
+								
+								<div class="form_line">
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-name">Имя:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<input type="text" name="quolity-name" id="quolity-name"  maxlength="200" class="f-s" value="">
+											<input type="text" name="quolity-name" id="quolity-name"  maxlength="200" class="f-s required" value="">
 										</div>
 									</div>
+									</div>
+									<div class="form_line">
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-tel">Телефон:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<input type="text" name="quolity-tel" id="quolity-tel" maxlength="200"  class="f-s" value="">
+											<input type="text" name="quolity-tel" id="quolity-tel" maxlength="200"  class="f-s required" value="">
 										</div>
 									</div>
+									</div>
+									
+									<div class="form_line">
 									<!--error-->
-									<div class="error">Необходимо заполнить</div>
+									<div class="error error_text">Необходимо заполнить</div>
 									<!--end error-->
 									<div>
 										<div class="f-leftcolumn">
 											<label for="quolity-email">E-mail:</label>
 										</div>
 										<div class="f-rightcolumn">
-											<input type="text" name="quolity-email" id="quolity-email" maxlength="200"  class="f-s" value="">
+											<input type="text" name="quolity-email" id="quolity-email" maxlength="200"  class="f-s required email" value="">
 										</div>
 									</div>
-																		
+									</div>									
 								</fieldset>
 								
 								<fieldset class="f-standart">
@@ -402,31 +419,9 @@
 										</p>
 									</div>						
 								</fieldset>
+							</div>			
 							</form>	
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-					
+											
 				</div>
 				<!--end inspage-->
 				

@@ -2153,8 +2153,13 @@ top: -5px;
 z-index: 99999;
 }
 .form-universal .fm-yes,
-.form-universal .fm-no {
+.form-universal .fm-no,
+.form-quolity .fm-yes,
+.form-quolity .fm-no {
 display: none;
+}
+.form-quolity  .error_text {
+
 }
 
 	

@@ -238,11 +238,34 @@ if($(this).val() == '') {
 	} 
 }	
 });
-/* END textarea */			
-		
+/* END textarea */	
+
+/* textarea */	
+
+form.find(".form_line.checkbox_group").each(function(i,el) {
+var one_check = 0;	
+$(this).find(".required_checkbox").each(function(i,el) {
+if($(this).prop("checked") == true) {
+one_check = one_check + 1;
+}
+});
+console.log("one_check - "+one_check+"");
+if(one_check == 0) {
+				 
+             $(this).removeClass("complete");
+		     $(this).addClass("incorrect");
+		     scroll_2first_error ();		
+
+}else {			 
+		     $(this).removeClass("incorrect");
+		     $(this).addClass("complete");
+
+}	
+});
+/* END textarea */	
 		
 
-   }	
+}	
 	
 				
 		
@@ -1210,11 +1233,23 @@ form.closest("form").find(".fm-no").show();
 });
 /* END ins-feedback */
 
+/* ins-quolity */
+$("body").on('submit','.form-quolity',function(){
+return false;
+});
+$(".form-quolity .bt-base").on('click',function(){
+var form = $(this).closest(".form-body");
+if (validator(form)) {
+form.hide();
+form.closest("form").find(".fm-no").hide();
+form.closest("form").find(".fm-yes").show();
+/* Здесь отправляем данные формы*/
+}else{
+form.closest("form").find(".fm-no").show();
+}
+});
+/* END ins-quolity */
 
 });
 
 
-
-
-
-/* END Карта */
