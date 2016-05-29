@@ -696,7 +696,16 @@ final_price = NumFormat(final_price,"add_space");
 el.find(".pv").text(final_price);
 }
 
+
+
 function add2cart(el){
+var price = parseInt(el.find(".pv").text());
+console.log("price - "+price+"");
+if (price == 0){
+var popup_id = "popup9";
+popup_show(popup_id);
+}else{
+
 var product_id = el.attr("data-id"); // добавляем в корзину id товара
 var quantity = parseInt(el.find(".tocart-qw").val()); // добавляем в корзине товару кол-во
 var sale = parseInt(el.attr("data-sale"));
@@ -726,6 +735,7 @@ final_price = final_price + dopingr[i]["cost"];
 });
 }
 minicart_update(product_id, quantity, final_price, sale); // обновляем миникорзину
+}
 }
 
 function minicart_update(product_id, quantity, price, sale){
