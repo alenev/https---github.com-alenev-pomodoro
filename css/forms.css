@@ -846,7 +846,7 @@ fieldset.f-standart .checkb-radio .f-comment-block {
 }
 
 .form-action fieldset.f-standart {
-	margin: 0 0 20px 0;
+	margin: 0;
 }
 
 .form-action fieldset.f-standart select {
@@ -870,6 +870,14 @@ fieldset.f-standart .checkb-radio .f-comment-block {
 
 .form-action .form-message {
 	font-weight: bold;
+}
+
+.form-action .form-action-total {
+	color: rgb(255, 12, 0);
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.2em;
+	margin: 0 0 22px 0;	
 }
 
 /*	-------------------------
@@ -969,13 +977,16 @@ form.form-profile {
 	margin-bottom: 40px;
 	padding-bottom: 20px;
 }
+
+/*	-------------------------
+	DENIS Additional elements for all forms
+	-------------------------	*/
+	
 .form_line .error_text {
 display: none;
 }
 .form_line.incorrect .error_text {
 display: block;
-font-size: 11px;
-width: 210px;
 }
 .form-recall-send {
 display: none;
@@ -989,14 +1000,6 @@ display: none !important;
 display: block !important;
 }
 .action_constructor_total {
-width: 100%;
-float: left;
-margin: 15px 0;
-text-align: center;
 }
-.action_constructor_total span {
-color: rgb(255, 12, 0);
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.2em;
+.action_constructor_total span {	
 }
