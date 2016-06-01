@@ -693,6 +693,10 @@ fieldset.f-standart .checkb-radio .f-comment-block {
 	margin-bottom: 0;
 }
 
+.form-dostavka fieldset.f-standart div.error  {
+	margin: 0 0 0 280px;
+}
+
 /*	-------------------------
 	FORMS:  .form-samovivoz
 	-------------------------	*/
@@ -721,6 +725,10 @@ fieldset.f-standart .checkb-radio .f-comment-block {
 
 .form-samovivoz fieldset.f-standart .checkb-radio {
 	margin-bottom: 0;
+}
+
+.form-samovivoz fieldset.f-standart div.error  {
+	margin: 0 0 0 280px;
 }
 
 /*	-------------------------
