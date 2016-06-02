@@ -419,6 +419,9 @@ $(".button-close").removeAttr("href");
 $("body").on('keyup', '.form-tocart .tocart-qw', function(){
 var cv = parseInt($(this).val());
 var nv = 1;
+if (isNaN(cv)){
+cv = 1;
+}
 if (cv < 1) {
 nv = 1;
 console.log("<1");
@@ -500,17 +503,13 @@ var is = $(this).find(".pv").text();
 is = parseInt(NumFormat(is,"crop_space"));
 basket_summ = basket_summ + is;
 });
-console.log("basket_summ1 - "+basket_summ+"");
 if (basket_summ > 0) {
 basket_summ_text = NumFormat(basket_summ,"add_space");
-console.log("basket_summ_text - "+basket_summ_text+"");
 $(".ss-sum .pv").text(basket_summ_text );
 var basket_discount_val = parseInt($(".basket_discount_val").text());
-console.log("basket_discount_val - "+basket_discount_val+"");
 if (basket_discount_val > 0) {
 var basket_discount_value = basket_summ * basket_discount_val / 100;
 var basket_discount_summ = basket_summ - basket_discount_value;
-console.log("basket_discount_summ - "+basket_discount_summ+"");
 basket_discount_summ = NumFormat(basket_discount_summ,"add_space");
 $("#cart_total_block .ds").text(basket_discount_summ);
 }
