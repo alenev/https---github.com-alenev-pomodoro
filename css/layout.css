@@ -2155,12 +2155,17 @@ z-index: 99999;
 .form-universal .fm-yes,
 .form-universal .fm-no,
 .form-quolity .fm-yes,
-.form-quolity .fm-no {
+.form-quolity .fm-no,
+.delivery_form  .fm-yes,
+.delivery_form   .fm-no,
+.form-samovivoz .fm-yes,
+.form-samovivoz  .fm-no  {
 display: none;
 }
 .form-quolity  .error_text {
 
 }
+
 
 	
 	

@@ -1270,6 +1270,48 @@ form.closest("form").find(".fm-no").show();
 });
 /* END ins-quolity */
 
+/* form-dostavka */
+$("body").on('submit','.form-dostavka',function(){
+return false;
+});
+$(".form-dostavka .bt-base").on('click',function(){
+var form = $(this).closest(".form-body");
+if (validator(form)) {
+form.hide();
+form.closest("form").find(".fm-no").hide();
+form.closest("form").find(".fm-yes").show();
+/* Здесь отправляем данные формы*/
+}else{
+form.closest("form").find(".fm-no").show();
+}
+});
+/* END form-dostavka */
+
+/* form-samovivoz */
+$("body").on('submit','.form-samovivoz',function(){
+return false;
+});
+$(".form-samovivoz .bt-base").on('click',function(){
+var form = $(this).closest(".form-body");
+var factory = parseInt($(".factory_choice").attr("data-factory"));
+if (validator(form)) {
+if (factory > 0) {
+form.hide();
+form.closest("form").find(".fm-no").hide();
+form.closest("form").find(".fm-yes").show();
+/* Здесь отправляем данные формы*/
+}else{
+form.closest("form").find(".fm-no").show();
+}
+}else{
+form.closest("form").find(".fm-no").show();
+if (factory > 0) {
+form.closest("form").find(".fm-no.factory").hide();
+}
+}
+});
+/* END form-samovivoz */
+
 });
 
 
