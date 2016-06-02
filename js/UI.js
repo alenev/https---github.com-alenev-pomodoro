@@ -494,7 +494,28 @@ $(this).remove(); // удаление из миникорзины товара
 minicart_update(); // апдейт миникорзины
 }
 });
-alert("msg21: basket item id="+item_id+" is remove");
+var basket_summ = 0;
+$(".item-basket").each(function(){
+var is = $(this).find(".pv").text();
+is = parseInt(NumFormat(is,"crop_space"));
+basket_summ = basket_summ + is;
+});
+console.log("basket_summ1 - "+basket_summ+"");
+if (basket_summ > 0) {
+basket_summ_text = NumFormat(basket_summ,"add_space");
+console.log("basket_summ_text - "+basket_summ_text+"");
+$(".ss-sum .pv").text(basket_summ_text );
+var basket_discount_val = parseInt($(".basket_discount_val").text());
+console.log("basket_discount_val - "+basket_discount_val+"");
+if (basket_discount_val > 0) {
+var basket_discount_value = basket_summ * basket_discount_val / 100;
+var basket_discount_summ = basket_summ - basket_discount_value;
+console.log("basket_discount_summ - "+basket_discount_summ+"");
+basket_discount_summ = NumFormat(basket_discount_summ,"add_space");
+$("#cart_total_block .ds").text(basket_discount_summ);
+}
+}
+//alert("msg21: basket item id="+item_id+" is remove basket_summ - "+basket_summ+"");
 if ($(".item-basket").length < 1) {
 $("#cart_total_block").hide();
 $("#cart_empty").show();
