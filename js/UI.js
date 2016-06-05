@@ -470,8 +470,8 @@ $(".geo-change").on('click', function(){
 var popup_id = "popup2";
 popup_show(popup_id);
 $("#popup2 .region-active").removeClass("region-active");
-var city_id = parseInt($.cookie('pomodoro_city_id'));
-if (city_id != " ") {
+var city_id = $('.header-geo .geo-city').attr("data-id");
+if (city_id > 0) {
 $("#popup2 a").each(function(){ 
 var id = $(this).attr("data-id");
 if (city_id == id) {
@@ -583,28 +583,31 @@ window.st = parseInt($(window).scrollTop());
 });
 
 $(document).ready(function(){
-console.log("city - "+$.cookie('pomodoro_city')+"");
-console.log("region - "+$.cookie('pomodoro_region')+"");
-if ($.cookie('pomodoro_city') == ''){
-console.log($.cookie('pomodoro_city'));
+var current_city = $(".geo-city").attr("data-id");
+
+if (!current_city){
 var popup_id = "popup2";
 popup_show(popup_id);
-}else{
-$(".geo-city").text($.cookie('pomodoro_city'));
-$(".geo-region").text($.cookie('pomodoro_region'));
 }
+
+
 $(".pomodoro-region-list a").on('click',function(){
 var city = $(this).text(); 
 var region = $(this).attr("data-region");
 var city_id = $(this).attr("data-id"); 
-$.cookie('pomodoro_city', ''+city+'', { expires: 31 });
-$.cookie('pomodoro_region', ''+region+'', { expires: 31 });
-$.cookie('pomodoro_city_id', ''+city_id+'', { expires: 31 });
-$(".geo-city").text(city);
-$(".geo-region").text(region);
+
+$(".geo-city").each(function(){
+$(this).text(city);
+$(this).attr("data-id", city); 
+});
+$(".geo-region").each(function(){
+$(this).text(region);
+$(this).attr("data-id", region); 
+});
+
+
 alert("msg01: pomodoro_city - "+city+" pomadoro_region - "+region+"");
 popup_hide();
-
 
 var change_city_mode = 1; // Перезагружаем страницу и выводим сообщение о том что цены перессчитаны.
 
@@ -865,7 +868,7 @@ $(document).ready(function(){
 
 /* Проверка возможности доставки */
 if ($(".delivery_tabs").length > 0){
-var city = $.cookie('pomodoro_city');
+var city = $(".header-col1 .geo-city").attr("data-id");
 var delivery = confirm("msg22: Текущий город "+city+". В нем есть доставка?"); 
 if (delivery == false) { // если переменная delivery будет false то блокируем таб доставки
 setTimeout(function(){
@@ -1242,6 +1245,10 @@ $(this).closest(".ymaps-2-1-39-places-pane").removeClass("open");
 }
 popup_hide();
 $(".pizza_factory_adress").text(factory_id);
+$(".factory_choice_wrap").addClass("hide");
+$(".pizza_factory_adress_wrap").addClass("show");
+$(".factory_choice").attr("data-factory",factory_id);
+$(".fm-no.factory").hide();
 alert("msg:27 data-factory="+factory_id+"");
 });
 

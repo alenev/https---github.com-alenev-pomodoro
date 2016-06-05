@@ -2159,11 +2159,13 @@ z-index: 99999;
 .delivery_form  .fm-yes,
 .delivery_form   .fm-no,
 .form-samovivoz .fm-yes,
-.form-samovivoz  .fm-no  {
+.form-samovivoz  .fm-no,
+.pizza_factory_adress_wrap,
+.hide   {
 display: none;
 }
-.form-quolity  .error_text {
-
+.pizza_factory_adress_wrap.show {
+display: block;
 }
 
 
