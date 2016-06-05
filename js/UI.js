@@ -980,7 +980,6 @@ myBalloonContentBodyLayout = ymaps.templateLayoutFactory.createClass(
     });
 	
  
-myGeoObjects = [];	// кластер меток для 1-го города
 
 /* метка 1 */
         var baloon1 = ymaps.templateLayoutFactory.createClass(
@@ -1018,8 +1017,10 @@ myGeoObjects = [];	// кластер меток для 1-го города
                  iconContentLayout: baloon1,
                  preset: 'twirl#nightStretchyIcon'
              });
+			 
+//наносим отдельно маркер на карту
+myMap.geoObjects.add(baloon1_map_marker);			 
 
-myGeoObjects.push(baloon1_map_marker); // добавляем метку в кластер для города
 /* END метка 1*/
 
 
@@ -1059,30 +1060,13 @@ myGeoObjects.push(baloon1_map_marker); // добавляем метку в кл�
                  iconContentLayout: baloon2,
                  preset: 'twirl#nightStretchyIcon'
              });
+			 
+//наносим отдельно маркер на карту
+myMap.geoObjects.add(baloon2_map_marker);
 
-myGeoObjects.push(baloon2_map_marker); // добавляем метку в кластер для города
 /* END метка 2 */
 
-var clusterIcons=[{
-href:'https://api-maps.yandex.ru/2.0.43/images/c2784ae9ffc628d8a84f28dec13c48cd.png',
-size:[53,52],
-offset:[0,0]
-}],
-clusterNumbers=[100],
-clusterer = new ymaps.Clusterer({
-margin:[20],
-clusterIcons:clusterIcons,
-clusterDisableClickZoom: true,
-clusterNumbers:clusterNumbers
-});
- 
-clusterer.add(myGeoObjects);
-//наносим  на карту кластер меток
-myMap.geoObjects.add(clusterer);
 
-
-
-myGeoObjects2 = [];	// кластер меток для 2-го города
 
 /* метка 3 */
         var baloon3 = ymaps.templateLayoutFactory.createClass(
@@ -1120,9 +1104,14 @@ myGeoObjects2 = [];	// кластер меток для 2-го города
                  iconContentLayout: baloon3,
                  preset: 'twirl#nightStretchyIcon'
              });
+			 
 
-myGeoObjects2.push(baloon3_map_marker); // добавляем метку в кластер для города
+//наносим отдельно маркер на карту
+myMap.geoObjects.add(baloon3_map_marker);			 
+
 /* END метка 3 */
+
+
 
 /* метка 4 */
         var baloon4 = ymaps.templateLayoutFactory.createClass(
@@ -1160,31 +1149,14 @@ myGeoObjects2.push(baloon3_map_marker); // добавляем метку в кл
                  iconContentLayout: baloon4,
                  preset: 'twirl#nightStretchyIcon'
              });
+			 
+//наносим отдельно маркер на карту
+myMap.geoObjects.add(baloon4_map_marker);
 
-myGeoObjects2.push(baloon4_map_marker); // добавляем метку в кластер для города
 /* END метка 4 */
 
 
-var clusterIcons=[{
-href:'https://api-maps.yandex.ru/2.0.43/images/c2784ae9ffc628d8a84f28dec13c48cd.png',
-size:[53,52],
-offset:[0,0]
-}],
-clusterNumbers=[100],
-clusterer2 = new ymaps.Clusterer({ // формируем 2-й кластер меток
-margin:[20],
-clusterIcons:clusterIcons,
-clusterDisableClickZoom: true,
-clusterNumbers:clusterNumbers
-});
- 
-clusterer2.add(myGeoObjects2);
-//наносим  на карту 2-й кластер меток
-myMap.geoObjects.add(clusterer2);
 
-
-//наносим отдельно маркер на карту
-//myMap.geoObjects.add(baloon1_map_marker);
 
 // Создание экземпляра элемента управления Zoom
 myMap.controls.add(
