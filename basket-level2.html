@@ -197,249 +197,251 @@
 				<!--tabs-holder-->
 				<div class="tabs-holder">
 				
+					<!--delivery_tabs-->
 					<div id="tabs" class="delivery_tabs">
 						  <ul>
 							<li><a href="#tabs-1">Доставка курьером</a></li>
 							<li><a href="#tabs-2">Самовывоз из пиццерии</a></li>
 						  </ul>
+						  
 						  <!--tabs-1-->
 						  <div id="tabs-1">
 							
 							<p class="heading-h4 text-align-center">Доставка курьером</p>
-						    
-							<div class="delivery_form">
 							
-							<table class="table-zakaz">
-								<tr>
-									<td>Ваш город:</td>
-									<td class="tz-city">
-										Железнодорожный, Московская обл. 
-										<a class="bt-small bt-green bt-auto">Выбрать другой город</a>
-									</td>
-								</tr>
-								<tr>
-									<td>Акции в корзине:</td>
-									<td  class="tz-sum">
-										<!--1 шт. на сумму 450 <span class="rouble">Р</span>--> 0
-									</td>
-								</tr>								
-								<tr>
-									<td>Общая сумма заказа:</td>
-									<td  class="tz-sum">
-										2 000  <span class="rouble">Р</span>
-									</td>
-								</tr>
-								<tr>
-									<td>Стоимость доставки:</td>
-									<td  class="tz-sum-dost">
-										300  <span class="rouble">Р</span>
-									</td>
-								</tr>
-								<tr>
-									<td>Итого к оплате с доставкой:</td>
-									<td  class="tz-sum-total">
-										2 300  <span class="rouble">Р</span>
-									</td>
-								</tr>
-							</table>							
+							<!--delivery_form-->	
+							<div class="delivery_form">							
+								<table class="table-zakaz">
+									<tr>
+										<td>Ваш город:</td>
+										<td class="tz-city">
+											Железнодорожный, Московская обл. 
+											<a class="bt-small bt-green bt-auto">Выбрать другой город</a>
+										</td>
+									</tr>
+									<tr>
+										<td>Акции в корзине:</td>
+										<td  class="tz-sum">
+											<!--1 шт. на сумму 450 <span class="rouble">Р</span>--> 0
+										</td>
+									</tr>								
+									<tr>
+										<td>Общая сумма заказа:</td>
+										<td  class="tz-sum">
+											2 000  <span class="rouble">Р</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Стоимость доставки:</td>
+										<td  class="tz-sum-dost">
+											300  <span class="rouble">Р</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Итого к оплате с доставкой:</td>
+										<td  class="tz-sum-total">
+											2 300  <span class="rouble">Р</span>
+										</td>
+									</tr>
+								</table>							
 							
-							
-							
-							
-							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-dostavka" autocomplete="off">
-								
-								<fieldset class="f-standart">
-									<!--error-->
-									<div class="form-message fm-no">Пожалуйста, заполните все обязательные поля</div>
-									<!--end error-->
-									<!--error-->
-									<div class="form-message fm-yes">
-										Ваш заказ успешно отправлен!<br>
-										Ближайшее время менеджер свяжется с вами для его подтверждения.
-									</div>
-									<!--end error-->
+								<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-dostavka" autocomplete="off">									
+									<fieldset class="f-standart">
+										<!--error-->
+										<div class="form-message fm-no">Пожалуйста, заполните все обязательные поля</div>
+										<!--end error-->
+										<!--error-->
+										<div class="form-message fm-yes">
+											Ваш заказ успешно отправлен!<br>
+											Ближайшее время менеджер свяжется с вами для его подтверждения.
+										</div>
+										<!--end error-->
 									</fieldset>
 									
+									<!--form-body-->
 									<div class="form-body">	
-									<fieldset>
-									<div>
-										<div class="f-leftcolumn">
-											Дата:
-										</div>
-										<div class="f-rightcolumn">
-											<select name="date_post_day" id="date_post_day" class="f-xxxs">
-													<option value="1">1</option>
-													<option value="2" selected>2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6">6</option>
-													<option value="7">7</option>
-													<option value="8">8</option>
-													<option value="9">9</option>
-													<option value="10">10</option>
-													<option value="11">11</option>
-													<option value="12">12</option>
-													<option value="13">13</option>
-													<option value="14">14</option>
-													<option value="15">15</option>
-													<option value="16">16</option>
-													<option value="17">17</option>
-													<option value="18">18</option>
-													<option value="19">19</option>
-													<option value="20">20</option>
-													<option value="21">21</option>
-													<option value="22">22</option>
-													<option value="23">23</option>
-													<option value="24">24</option>
-													<option value="25">25</option>
-													<option value="26">26</option>
-													<option value="27">27</option>
-													<option value="28">28</option>
-													<option value="29">29</option>
-													<option value="30">30</option>
-													<option value="31">31</option>
-												</select>
-												<select name="date_post_month" id="date_post_month" class="f-xxs">
-													<option value="1">Января</option>
-													<option value="2">Февраля</option>
-													<option value="3">Марта</option>
-													<option value="4" selected>Апреля</option>
-													<option value="5">Мая</option>
-													<option value="6">Июня</option>
-													<option value="7">Июля</option>
-													<option value="8">Августа</option>
-													<option value="9">Сентября</option>
-													<option value="10">Октября</option>
-													<option value="11">Ноября</option>
-													<option value="12">Декабря</option>
-												</select>									                                  	
-										</div>
+										<fieldset class="f-standart">
+											<div>
+												<div class="f-leftcolumn">
+													Дата:
+												</div>
+												<div class="f-rightcolumn">
+													<select name="date_post_day" id="date_post_day" class="f-xxxs">
+															<option value="1">1</option>
+															<option value="2" selected>2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+															<option value="13">13</option>
+															<option value="14">14</option>
+															<option value="15">15</option>
+															<option value="16">16</option>
+															<option value="17">17</option>
+															<option value="18">18</option>
+															<option value="19">19</option>
+															<option value="20">20</option>
+															<option value="21">21</option>
+															<option value="22">22</option>
+															<option value="23">23</option>
+															<option value="24">24</option>
+															<option value="25">25</option>
+															<option value="26">26</option>
+															<option value="27">27</option>
+															<option value="28">28</option>
+															<option value="29">29</option>
+															<option value="30">30</option>
+															<option value="31">31</option>
+														</select>
+														<select name="date_post_month" id="date_post_month" class="f-xxs">
+															<option value="1">Января</option>
+															<option value="2">Февраля</option>
+															<option value="3">Марта</option>
+															<option value="4" selected>Апреля</option>
+															<option value="5">Мая</option>
+															<option value="6">Июня</option>
+															<option value="7">Июля</option>
+															<option value="8">Августа</option>
+															<option value="9">Сентября</option>
+															<option value="10">Октября</option>
+															<option value="11">Ноября</option>
+															<option value="12">Декабря</option>
+														</select>									                                  	
+												</div>
+											</div>
+											<div class="form_line">	
+												<!--error-->
+												<div class="error error_text">Необходимо заполнить</div>
+												<!--end error-->								
+												<div class="f-leftcolumn">
+													<label for="time">Время:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<input type="text" name="time" id="time"  maxlength="100" class="f-xs required" value="">
+												</div>
+											</div>
+											<div class="form_line">	
+												<!--error-->
+												<div class="error error_text">Необходимо заполнить</div>
+												<!--end error-->
+												<div class="f-leftcolumn">
+													<label for="adress">Адрес доставки:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<textarea name="adress" id="adress" cols="" rows="" maxlength="1000" class="f-l required required_textarea">Ленинградский проспект, дом 4</textarea>
+												</div>
+											</div>									
+										</fieldset>
+										<fieldset class="f-standart">	
+											<div>
+												<div class="f-leftcolumn">	
+													&nbsp;
+												</div>
+												<div class="f-rightcolumn checkb-radio">
+													<label>
+														<input type="radio" name="oplata" value="oplata-nal" checked> <span class="bold">Наличными курьеру</span> 
+													</label>
+													<label>
+														<input type="radio" name="oplata" value="oplata-e"> <span class="bold">Оплатить онлайн</span> 
+														<span class="f-comment-block">Оплата банковскими картами, электронными деньгами, со счета мобильного телефона и другими удобными способами.</span>
+													</label>
+												</div>
+											</div>	
+										</fieldset>	
+										<fieldset class="f-standart">
+											<div class="form_line">	
+												<!--error-->
+												<div class="error error_text">Необходимо заполнить</div>
+												<!--end error-->
+												<div class="f-leftcolumn">
+													<label for="name">Имя:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<input type="text" name="name" id="name"  maxlength="200" class="f-s required" value="">
+												</div>
+											</div>
+											<div class="form_line">	
+												<!--error-->
+												<div class="error error_text">Необходимо заполнить</div>
+												<!--end error-->
+												<div class="f-leftcolumn">
+													<label for="tel">Телефон:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<input type="text" name="tel" id="tel" maxlength="200"  class="f-s required" value="">
+												</div>
+											</div>
+											<div class="form_line">	
+												<!--error-->
+												<div class="error error_text">Необходимо заполнить</div>
+												<!--end error-->								
+												<div class="f-leftcolumn">
+													<label for="email">E-mail:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<input type="text" name="email" id="email" maxlength="200"  class="f-s required email" value="">
+												</div>
+											</div>
+											<div>
+												<div class="f-leftcolumn">
+													<label for="comm1">Примечание:</label>
+												</div>
+												<div class="f-rightcolumn">
+													<textarea name="comments" id="comm1" cols="" rows="" maxlength="1000" class="f-l"></textarea>
+												</div>
+											</div>									
+										</fieldset>
+									
+										<fieldset class="f-standart">
+											<!--error-->
+											<div class="form-message fm-no">Некорректно введено цифровое подтверждение</div>
+											<!--end error-->
+											<div>
+												<div class="f-leftcolumn">
+													Введите код с картинки:
+												</div>
+												<div class="f-rightcolumn code">	
+													<label>
+														<img src="i-all/code.jpg" alt="">
+														<input type="text" name="human-control" id="human-check" class="f-xxxs">
+														<a href="" class="code-other">показать другой код</a>
+													</label>
+												</div>
+											</div>							
+										</fieldset>
+										<fieldset class="f-standart">									
+											<div>
+												<div class="f-leftcolumn">
+													&nbsp;
+												</div>
+												<div class="f-rightcolumn">	
+													<input type="submit" value="Заказать!" class="bt-base bt-red bt-200x56">											
+												</div>
+											</div>
+										</fieldset>
+										<fieldset class="f-standart">									
+											<div>
+												<p class="italic">
+													Примечания:<br>
+													1. Все поля формы обязательны для заполнения;<br>
+													2. Нажимая на кнопку &laquo;Заказать&raquo; вы соглашаетесь с <a href="">Правилами предоставления услуг</a>
+														и даете свое согласие на обработку персональных данных.	
+												</p>
+											</div>						
+										</fieldset>
 									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->								
-										<div class="f-leftcolumn">
-											<label for="time">Время:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="time" id="time"  maxlength="100" class="f-xs required" value="">
-										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="adress">Адрес доставки:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<textarea name="adress" id="adress" cols="" rows="" maxlength="1000" class="f-l required required_textarea">Ленинградский проспект, дом 4</textarea>
-										</div>
-									</div>									
-								</fieldset>
-								<fieldset class="f-standart">	
-									<div>
-										<div class="f-leftcolumn">	
-											&nbsp;
-										</div>
-										<div class="f-rightcolumn checkb-radio">
-											<label>
-												<input type="radio" name="oplata" value="oplata-nal" checked> <span class="bold">Наличными курьеру</span> 
-											</label>
-											<label>
-												<input type="radio" name="oplata" value="oplata-e"> <span class="bold">Оплатить онлайн</span> 
-												<span class="f-comment-block">Оплата банковскими картами, электронными деньгами, со счета мобильного телефона и другими удобными способами.</span>
-											</label>
-										</div>
-									</div>	
-								</fieldset>	
-								<fieldset class="f-standart">
-								    <div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="name">Имя:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="name" id="name"  maxlength="200" class="f-s required" value="">
-										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="tel">Телефон:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="tel" id="tel" maxlength="200"  class="f-s required" value="">
-										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->								
-										<div class="f-leftcolumn">
-											<label for="email">E-mail:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="email" id="email" maxlength="200"  class="f-s required email" value="">
-										</div>
-									</div>
-									<div>
-										<div class="f-leftcolumn">
-											<label for="comm1">Примечание:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<textarea name="comments" id="comm1" cols="" rows="" maxlength="1000" class="f-l"></textarea>
-										</div>
-									</div>									
-								</fieldset>
-								
-								<fieldset class="f-standart">
-									<!--error-->
-										<div class="form-message fm-no">Некорректно введено цифровое подтверждение</div>
-									<!--end error-->
-									<div>
-										<div class="f-leftcolumn">
-											Введите код с картинки:
-										</div>
-										<div class="f-rightcolumn code">	
-											<label>
-												<img src="i-all/code.jpg" alt="">
-												<input type="text" name="human-control" id="human-check" class="f-xxxs">
-												<a href="" class="code-other">показать другой код</a>
-											</label>
-										</div>
-									</div>							
-								</fieldset>
-								<fieldset class="f-standart">									
-									<div>
-										<div class="f-leftcolumn">
-											&nbsp;
-										</div>
-										<div class="f-rightcolumn">	
-											<input type="submit" value="Заказать!" class="bt-base bt-red bt-200x56">											
-										</div>
-									</div>
-								</fieldset>
-								<fieldset class="f-standart">									
-									<div>
-										<p class="italic">
-											Примечания:<br>
-											1. Все поля формы обязательны для заполнения;<br>
-											2. Нажимая на кнопку &laquo;Заказать&raquo; вы соглашаетесь с <a href="">Правилами предоставления услуг</a>
-												и даете свое согласие на обработку персональных данных.	
-										</p>
-									</div>						
-								</fieldset>
-								</div>	
-							</form>	
-						</div>
-						
+									<!--end form-body-->								
+								</form>
+							</div>
+							<!--end delivery_form-->
+							
+							<!--delivery_message-1-->
 							<div id="not_delivery_info1" class="info-message delivery_message">
 								<p>
 									В настоящее время в выбранном городе доставка не предусмотрена<br>
@@ -454,7 +456,9 @@
 									*Скидка не распространяется на стоимость &laquo;Акций&raquo;,<br>если они присутствуют в заказе.
 								</p>								
 							</div>
+							<!--end delivery_message-1-->
 							
+							<!--delivery_message-2-->
 							<div id="not_delivery_info2" class="info-message delivery_message">
 								<p>
 									Ваш заказ на сумму <span class="bold font-m">499</span> <span class="rouble bold font-m">Р</span>
@@ -470,7 +474,9 @@
 									*Скидка не распространяется на стоимость &laquo;Акций&raquo;,<br>если они присутствуют в заказе.
 								</p>	
 							</div>
-
+							<!--end delivery_message-2-->
+							
+							<!--delivery_message-3-->
 							<div id="not_delivery_info3" class="info-message delivery_message">
 								<p>
 									В вашей корзине находится &laquo;Акция&raquo;,<br>
@@ -483,11 +489,11 @@
 									<span class="bold font-l">При самовывозе на заказы действует скидка 30% !*</span><br>
 									<span class="italic">*Скидка не распространяется на стоимость &laquo;Акций&raquo;.</span>
 								</p>	
-							</div>							
-					
-						
+							</div>
+							<!--end delivery_message-3-->		
 						</div>
 						<!-- end tabs-1-->
+						
 						
 						
 						<!--tabs-2-->
@@ -526,8 +532,7 @@
 										1 800  <span class="rouble">Р</span>
 									</td>
 								</tr>
-							</table>
-							
+							</table>							
 							
 							<form action="" onsubmit="" method="post" enctype="multipart/form-data" class="form-samovivoz" autocomplete="off">
 								<fieldset class="f-standart">
@@ -543,199 +548,200 @@
 										Ближайшее время менеджер свяжется с вами для его подтверждения.
 									</div>
 									<!--end error-->
-								</fieldset>	
+								</fieldset>
+								<!--form-body-->								
 								<div class="form-body">
-								<fieldset>	
-									<div>
-										<div class="f-leftcolumn">
-											<span class="bold">Пиццерия самовывоза:</span>
+									<fieldset class="f-standart">	
+										<div>
+											<div class="f-leftcolumn">
+												<span class="bold">Пиццерия самовывоза:</span>
+											</div>
+											<div class="f-rightcolumn">
+												<a data-factory="11" class="factory_choice bt-base bt-green bt-200x56">Выбрать пиццерию</a>
+											</div>
 										</div>
-										<div class="f-rightcolumn">
-											<a data-factory="11" class="factory_choice bt-base bt-green bt-200x56">Выбрать пиццерию</a>
+										<div>
+											<div class="f-leftcolumn">
+												<span class="bold">Пиццерия самовывоза:</span>
+											</div>
+											<div class="f-rightcolumn">
+												<span class="bold">ул. Мира, дом 12, сеть супермаркетов &laquo;Пятерочка&raquo;</span> 
+												<a class="bt-small bt-green bt-auto">Выбрать другую пиццерию</a>
+											</div>
 										</div>
-									</div>
-									<div>
-										<div class="f-leftcolumn">
-											<span class="bold">Пиццерия самовывоза:</span>
+									</fieldset>	
+									<fieldset class="f-standart">									
+										<div>
+											<div class="f-leftcolumn">
+												Дата:
+											</div>
+											<div class="f-rightcolumn">
+												<select name="date_post_day" id="date_post_day" class="f-xxxs">
+														<option value="1">1</option>
+														<option value="2" selected>2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+														<option value="11">11</option>
+														<option value="12">12</option>
+														<option value="13">13</option>
+														<option value="14">14</option>
+														<option value="15">15</option>
+														<option value="16">16</option>
+														<option value="17">17</option>
+														<option value="18">18</option>
+														<option value="19">19</option>
+														<option value="20">20</option>
+														<option value="21">21</option>
+														<option value="22">22</option>
+														<option value="23">23</option>
+														<option value="24">24</option>
+														<option value="25">25</option>
+														<option value="26">26</option>
+														<option value="27">27</option>
+														<option value="28">28</option>
+														<option value="29">29</option>
+														<option value="30">30</option>
+														<option value="31">31</option>
+													</select>
+													<select name="date_post_month" id="date_post_month" class="f-xxs">
+														<option value="1">Января</option>
+														<option value="2">Февраля</option>
+														<option value="3">Марта</option>
+														<option value="4" selected>Апреля</option>
+														<option value="5">Мая</option>
+														<option value="6">Июня</option>
+														<option value="7">Июля</option>
+														<option value="8">Августа</option>
+														<option value="9">Сентября</option>
+														<option value="10">Октября</option>
+														<option value="11">Ноября</option>
+														<option value="12">Декабря</option>
+													</select>									                                  	
+											</div>
 										</div>
-										<div class="f-rightcolumn">
-											<span class="bold">ул. Мира, дом 12, сеть супермаркетов &laquo;Пятерочка&raquo;</span> 
-											<a class="bt-small bt-green bt-auto">Выбрать другую пиццерию</a>
+										<div class="form_line">	
+											<!--error-->
+											<div class="error error_text">Необходимо заполнить</div>
+											<!--end error-->								
+											<div class="f-leftcolumn">
+												<label for="time">Время:</label>
+											</div>
+											<div class="f-rightcolumn">
+												<input type="text" name="time" id="time"  maxlength="100" class="f-xs required" value="">
+											</div>
+										</div>																		
+									</fieldset>
+									<fieldset class="f-standart">	
+										<div>
+											<div class="f-leftcolumn">	
+												&nbsp;
+											</div>
+											<div class="f-rightcolumn checkb-radio">
+												<label>
+													<input type="radio" name="oplata" value="oplata-nal" checked> <span class="bold">Наличными курьеру</span> 
+												</label>
+												<label>
+													<input type="radio" name="oplata" value="oplata-e"> <span class="bold">Оплатить онлайн</span> 
+													<span class="f-comment-block">Оплата банковскими картами, электронными деньгами, со счета мобильного телефона и другими удобными способами.</span>
+												</label>
+											</div>
+										</div>	
+									</fieldset>	
+									<fieldset class="f-standart">
+										<div class="form_line">	
+											<!--error-->
+											<div class="error error_text">Необходимо заполнить</div>
+											<!--end error-->
+											<div class="f-leftcolumn">
+												<label for="name">Имя:</label>
+											</div>
+											<div class="f-rightcolumn">
+												<input type="text" name="name" id="name"  maxlength="200" class="f-s required" value="">
+											</div>
 										</div>
-									</div>
-								</fieldset>	
-								<fieldset class="f-standart">									
-									<div>
-										<div class="f-leftcolumn">
-											Дата:
+										<div class="form_line">	
+											<!--error-->
+											<div class="error error_text">Необходимо заполнить</div>
+											<!--end error-->
+											<div class="f-leftcolumn">
+												<label for="tel">Телефон:</label>
+											</div>
+											<div class="f-rightcolumn">
+												<input type="text" name="tel" id="tel" maxlength="200"  class="f-s required" value="">
+											</div>
 										</div>
-										<div class="f-rightcolumn">
-											<select name="date_post_day" id="date_post_day" class="f-xxxs">
-													<option value="1">1</option>
-													<option value="2" selected>2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6">6</option>
-													<option value="7">7</option>
-													<option value="8">8</option>
-													<option value="9">9</option>
-													<option value="10">10</option>
-													<option value="11">11</option>
-													<option value="12">12</option>
-													<option value="13">13</option>
-													<option value="14">14</option>
-													<option value="15">15</option>
-													<option value="16">16</option>
-													<option value="17">17</option>
-													<option value="18">18</option>
-													<option value="19">19</option>
-													<option value="20">20</option>
-													<option value="21">21</option>
-													<option value="22">22</option>
-													<option value="23">23</option>
-													<option value="24">24</option>
-													<option value="25">25</option>
-													<option value="26">26</option>
-													<option value="27">27</option>
-													<option value="28">28</option>
-													<option value="29">29</option>
-													<option value="30">30</option>
-													<option value="31">31</option>
-												</select>
-												<select name="date_post_month" id="date_post_month" class="f-xxs">
-													<option value="1">Января</option>
-													<option value="2">Февраля</option>
-													<option value="3">Марта</option>
-													<option value="4" selected>Апреля</option>
-													<option value="5">Мая</option>
-													<option value="6">Июня</option>
-													<option value="7">Июля</option>
-													<option value="8">Августа</option>
-													<option value="9">Сентября</option>
-													<option value="10">Октября</option>
-													<option value="11">Ноября</option>
-													<option value="12">Декабря</option>
-												</select>									                                  	
+										<div class="form_line">	
+											<!--error-->
+											<div class="error error_text">Необходимо заполнить</div>
+											<!--end error-->
+											<div class="f-leftcolumn">
+												<label for="email">E-mail:</label>
+											</div>
+											<div class="f-rightcolumn">
+												<input type="text" name="email" id="email" maxlength="200"  class="f-s required email" value="">
+											</div>
 										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->								
-										<div class="f-leftcolumn">
-											<label for="time">Время:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="time" id="time"  maxlength="100" class="f-xs required" value="">
-										</div>
-									</div>																		
-								</fieldset>
-								<fieldset class="f-standart">	
-									<div>
-										<div class="f-leftcolumn">	
-											&nbsp;
-										</div>
-										<div class="f-rightcolumn checkb-radio">
-											<label>
-												<input type="radio" name="oplata" value="oplata-nal" checked> <span class="bold">Наличными курьеру</span> 
-											</label>
-											<label>
-												<input type="radio" name="oplata" value="oplata-e"> <span class="bold">Оплатить онлайн</span> 
-												<span class="f-comment-block">Оплата банковскими картами, электронными деньгами, со счета мобильного телефона и другими удобными способами.</span>
-											</label>
-										</div>
-									</div>	
-								</fieldset>	
-								<fieldset class="f-standart">
-								    <div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="name">Имя:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="name" id="name"  maxlength="200" class="f-s required" value="">
-										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="tel">Телефон:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="tel" id="tel" maxlength="200"  class="f-s required" value="">
-										</div>
-									</div>
-									<div class="form_line">	
-									<!--error-->
-									<div class="error error_text">Необходимо заполнить</div>
-									<!--end error-->
-										<div class="f-leftcolumn">
-											<label for="email">E-mail:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<input type="text" name="email" id="email" maxlength="200"  class="f-s required email" value="">
-										</div>
-									</div>
-									<div>
-										<div class="f-leftcolumn">
-											<label for="comm1">Примечание:</label>
-										</div>
-										<div class="f-rightcolumn">
-											<textarea name="comments" id="comm1" cols="" rows="" maxlength="1000" class="f-l"></textarea>
-										</div>
-									</div>									
-								</fieldset>
+										<div>
+											<div class="f-leftcolumn">
+												<label for="comm1">Примечание:</label>
+											</div>
+											<div class="f-rightcolumn">
+												<textarea name="comments" id="comm1" cols="" rows="" maxlength="1000" class="f-l"></textarea>
+											</div>
+										</div>									
+									</fieldset>
 								
-								<fieldset class="f-standart">
-									<!--error-->
-									<div class="form-message fm-no">Некорректно введено цифровое подтверждение</div>
-									<!--end error-->
-									<div>
-										<div class="f-leftcolumn">
-											Введите код с картинки:
-										</div>
-										<div class="f-rightcolumn code">	
-											<label>
-												<img src="i-all/code.jpg" alt="">
-												<input type="text" name="human-control" id="human-check" class="f-xxxs">
-												<a href="" class="code-other">показать другой код</a>
-											</label>
-										</div>
-									</div>							
-								</fieldset>
-								<fieldset class="f-standart">									
-									<div>
-										<div class="f-leftcolumn">
-											&nbsp;
-										</div>
-										<div class="f-rightcolumn">	
-											<input type="submit" value="Заказать!" class="bt-base bt-red bt-200x56">											
-										</div>
-									</div>
-						
-								</fieldset>
-								<fieldset class="f-standart">									
-									<div>
-										<p class="italic">
-											Примечания:<br>
-											1. Все поля формы обязательны для заполнения;<br>
-											2. Нажимая на кнопку &laquo;Заказать&raquo; вы соглашаетесь с <a href="">Правилами предоставления услуг</a>
-												и даете свое согласие на обработку персональных данных.	
-										</p>
-									</div>						
-								</fieldset>
+									<fieldset class="f-standart">
+										<!--error-->
+										<div class="form-message fm-no">Некорректно введено цифровое подтверждение</div>
+										<!--end error-->
+										<div>
+											<div class="f-leftcolumn">
+												Введите код с картинки:
+											</div>
+											<div class="f-rightcolumn code">	
+												<label>
+													<img src="i-all/code.jpg" alt="">
+													<input type="text" name="human-control" id="human-check" class="f-xxxs">
+													<a href="" class="code-other">показать другой код</a>
+												</label>
+											</div>
+										</div>							
+									</fieldset>
+									<fieldset class="f-standart">									
+										<div>
+											<div class="f-leftcolumn">
+												&nbsp;
+											</div>
+											<div class="f-rightcolumn">	
+												<input type="submit" value="Заказать!" class="bt-base bt-red bt-200x56">											
+											</div>
+										</div>						
+									</fieldset>
+									<fieldset class="f-standart">									
+										<div>
+											<p class="italic">
+												Примечания:<br>
+												1. Все поля формы обязательны для заполнения;<br>
+												2. Нажимая на кнопку &laquo;Заказать&raquo; вы соглашаетесь с <a href="">Правилами предоставления услуг</a>
+													и даете свое согласие на обработку персональных данных.	
+											</p>
+										</div>						
+									</fieldset>
 								</div>
+								<!--end form-body-->
 							</form>	
 							
 						 </div>
 						 <!--end tabs-2-->
 					</div>
-					
+					<!--end delivery_tabs-->
 				</div>
 				<!--end tabs-holder-->
 				
