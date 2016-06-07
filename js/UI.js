@@ -1279,9 +1279,6 @@ form.closest("form").find(".fm-no").show();
 
 /* form-samovivoz */
 $("body").on('submit','.form-samovivoz',function(){
-return false;
-});
-$(".form-samovivoz .bt-base").on('click',function(){
 var form = $(this).closest(".form-body");
 var factory = parseInt($(".factory_choice").attr("data-factory"));
 if (validator(form)) {
@@ -1299,6 +1296,7 @@ if (factory > 0) {
 form.closest("form").find(".fm-no.factory").hide();
 }
 }
+return false;
 });
 /* END form-samovivoz */
 
