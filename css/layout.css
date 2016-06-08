@@ -2097,6 +2097,12 @@ z-index: 999 !important;
 .ymaps-2-1-39-places-pane.open {
 z-index: 99996 !important;
 }
+.places_wrap {
+z-index: 999 !important;
+}
+.places_wrap.open {
+z-index: 99996 !important;
+}
 .ym_my_baloon:hover .placemark,
 .ym_my_baloon.active .placemark  {
     background: url("../i-all/ico-for-map-hover.png") 0 0 no-repeat;

@@ -1186,6 +1186,8 @@ console.log("label - "+label_name+"");
 map_labels_toggler(label_name);
 });
 
+var placesPane = myMap.panes.get('places').getElement();
+$(placesPane).addClass('places_wrap');
 
 }
 
@@ -1194,9 +1196,9 @@ function map_labels_toggler(label_name){
 var label = $("."+label_name+"");
 if (label.hasClass("active")) {
 label.removeClass("active");
-label.closest(".ymaps-2-1-39-places-pane").removeClass("open");
+label.closest(".places_wrap").removeClass("open");
 }else{
-label.closest(".ymaps-2-1-39-places-pane").addClass("open");
+label.closest(".places_wrap").addClass("open");
 label.addClass("active");
 }
 }
@@ -1204,7 +1206,7 @@ label.addClass("active");
 $(document).ready(function(){
 $("body").on('click', '.ym_my_baloon .pmc', function(){
 $(this).closest(".ym_my_baloon").removeClass("active");
-$(this).closest(".ymaps-2-1-39-places-pane").removeClass("open");
+$(this).closest(".places_wrap").removeClass("open");
 });
 
 $("body").on('click', '.factory_selector', function(){
@@ -1213,7 +1215,7 @@ var factory_id = $(this).attr("data-factory");
 }else{
 var factory_id = $(this).closest(".ym_my_baloon").attr("data-factory");
 $(this).closest(".ym_my_baloon").removeClass("active");
-$(this).closest(".ymaps-2-1-39-places-pane").removeClass("open");
+$(this).closest(".places_wrap").removeClass("open");
 }
 popup_hide();
 $(".pizza_factory_adress").text(factory_id);
