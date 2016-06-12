@@ -570,6 +570,7 @@ ymaps.ready(map_init(mapID, 1));
 }
 }
 
+
 function popup_hide(){
 var popup = $(".asvpopup-body.open");
 popup.removeClass("show");
@@ -960,7 +961,18 @@ $(document).ready(function(){
 //ymaps.ready(map1_init("map1")); формирование карты при загрузке страницы. map1 - id блока карты который должен быть видим на странице (без display: none). Если нужно вызывать в закрытом блоке то этот вызов нужно поместить в callback функции display: block
 });
 
+
+$(document).ready(function(){
+if ($('#map2').length > 0){
+ymaps.ready(map_init('map2', 0));
+}
+});
+
 function map_init(mapID, factory_selector_button) {
+
+return function () {
+
+console.log("map_init");
 var lat = $(".header-geo .geo-city").attr("data-lat");
 var lng = $(".header-geo .geo-city").attr("data-lng");
 var mzoom = $(".header-geo .geo-city").attr("data-zoom");
@@ -1004,7 +1016,6 @@ var lng = '';
 var address = '';
 
 item.forEach(function(item2, i2, item) {
-console.log( item2 );
 var w = parseInt(i2);
 
 if (w == 1) {
@@ -1086,6 +1097,8 @@ myMap.geoObjects.options.set({
 
 var placesPane = myMap.panes.get('places').getElement();
 $(placesPane).addClass('places_wrap');
+
+}
 
 }
 
@@ -1204,4 +1217,15 @@ form.closest("form").find(".fm-no.factory").hide();
 /* END form-samovivoz */
 
 });
-
+/*
+$(document).ready(function(){
+if ($('#map2').length > 0){
+$(".header").append("<span class='map2_caller'></span>");
+$("body").on('click','.map2_caller', function(){
+$( "#tabs" ).tabs();
+ymaps.ready(map_init('map2', 0));
+});
+$(".map2_caller").click();
+}
+});
+*/

@@ -2174,7 +2174,16 @@ display: none;
 display: block;
 }
 
-
+.map2_caller {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100px;
+height: 100px;
+border-radius: 50px;
+background: #fff;
+border: 2px solid #ccc;
+}
 	
 	
 	
