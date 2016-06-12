@@ -961,6 +961,9 @@ $(document).ready(function(){
 });
 
 function map_init(mapID, factory_selector_button) {
+var lat = $(".header-geo .geo-city").attr("data-lat");
+var lng = $(".header-geo .geo-city").attr("data-lng");
+var mzoom = $(".header-geo .geo-city").attr("data-zoom");
 
 // https://tech.yandex.ru/maps/geocoder/
             // Создание экземпляра карты и его привязка к контейнеру с
@@ -968,8 +971,8 @@ function map_init(mapID, factory_selector_button) {
            var myMap = new ymaps.Map(mapID, {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
-                    center: [50.40239488870546,30.53268999999996],
-                    zoom: 8
+                    center: [lat,lng],
+                    zoom: mzoom
                 }); 
 
 var myBalloonContentLayout = ymaps.templateLayoutFactory.createClass("<p>$[[options.contentBodyLayout]]</p>");
@@ -1015,13 +1018,7 @@ address = item2;
 }
 
 });
-/*
-console.log("lat - "+lat+"");
-console.log("lng - "+lng+"");
-console.log("address - "+address+"");
-console.log("factory_selector - "+factory_selector+"");
-console.log("----------------------------------------");
-*/
+
 window["baloon_" + i] = ymaps.templateLayoutFactory.createClass(
             '<div class="baloon_map_tmpl btmpl'+i+'"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
                 build: function () {
