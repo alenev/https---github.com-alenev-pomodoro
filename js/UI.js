@@ -605,10 +605,14 @@ $(".pomodoro-region-list a").on('click',function(){
 var city = $(this).text(); 
 var region = $(this).attr("data-region");
 var city_id = $(this).attr("data-id"); 
+var lat = $(this).attr("data-lat");
+var lng = $(this).attr("data-lng");
 
 $(".geo-city").each(function(){
 $(this).text(city);
 $(this).attr("data-id", city); 
+$(this).attr("data-lat", lat); 
+$(this).attr("data-lng", lng); 
 });
 $(".geo-region").each(function(){
 $(this).text(region);
