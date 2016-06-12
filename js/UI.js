@@ -1044,6 +1044,8 @@ current = item2;
 if (current == 'current') {
 current_class = 'current';
 }
+
+
 });
 
 window["baloon_" + i] = ymaps.templateLayoutFactory.createClass(
@@ -1141,8 +1143,15 @@ if ($(this).hasClass("list")){
 var factory_id = $(this).attr("data-factory");
 }else{
 var factory_id = $(this).closest(".ym_my_baloon").attr("data-factory");
+$(".places_wrap .ym_my_baloon").each(function(){
+if ($(this).hasClass("current")) {
+$(this).removeClass("current");
+}
+})
 $(this).closest(".ym_my_baloon").removeClass("active");
+$(this).closest(".ym_my_baloon").addClass("current");
 $(this).closest(".places_wrap").removeClass("open");
+
 }
 popup_hide();
 $(".pizza_factory_adress").text(factory_id);
