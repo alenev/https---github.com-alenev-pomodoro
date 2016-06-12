@@ -1,5 +1,5 @@
 var map_markers = [
-        ['1','50.46395229323288','30.509706499999982','<div class=" contact_big_map--label_line">Адрес 1</div><div class=" contact_big_map--label_line">Телефон 1</div><div class=" contact_big_map--label_line">Время работы 1</div>'],
+        ['1','50.46395229323288','30.509706499999982','<div class=" contact_big_map--label_line">Адрес 1</div><div class=" contact_big_map--label_line">Телефон 1</div><div class=" contact_big_map--label_line">Время работы 1</div>','current'],
         ['2','50.43673679334193','30.500965999999913','<div class=" contact_big_map--label_line">Адрес 2</div><div class=" contact_big_map--label_line">Телефон 2</div><div class=" contact_big_map--label_line">Время работы 2</div>'],
         ['3','50.364603793487795','30.960714499999995','<div class=" contact_big_map--label_line">Адрес 3</div><div class=" contact_big_map--label_line">Телефон 3</div><div class=" contact_big_map--label_line">Время работы 3</div>'],
         ['4','50.361535793456035','30.96633849999997','<div class=" contact_big_map--label_line">Адрес 4</div><div class=" contact_big_map--label_line">Телефон 4</div><div class=" contact_big_map--label_line">Время работы 4</div>'],
@@ -1018,10 +1018,16 @@ map_markers.forEach(function(item, i, map_markers) {
 var lat = '';
 var lng = '';
 var address = '';
+var current_class = '';
+var current = '';
+var id = '';
 
 item.forEach(function(item2, i2, item) {
 var w = parseInt(i2);
 
+if (w == 0) {
+id = item2;
+}
 if (w == 1) {
 lat = item2;
 }
@@ -1031,7 +1037,13 @@ lng = item2;
 if (w == 3) {
 address = item2;
 }
+if (w == 4) {
+current = item2;
+}
 
+if (current == 'current') {
+current_class = 'current';
+}
 });
 
 window["baloon_" + i] = ymaps.templateLayoutFactory.createClass(
@@ -1062,7 +1074,7 @@ window["baloon_" + i + "_map_marker"] = new ymaps.GeoObject({
                  },
                 properties: {
                 LabelName: 'ym_my_baloon_'+i+'', // класс метки в шаблоне метки. data-factory: id пиццерии 
-                balloonContentBody: '<div data-factory="2" class="ym_my_baloon ym_my_baloon_'+i+'"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info">'+address+' '+factory_selector+'<span class="pmc" "></span></div></div></div>'
+                balloonContentBody: '<div data-factory="'+id+'" class="ym_my_baloon ym_my_baloon_'+i+' '+current_class+'"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info">'+address+' '+factory_selector+'<span class="pmc" "></span></div></div></div>'
                  }
              }, { 
                  balloonContentBodyLayout: myBalloonContentBodyLayout,

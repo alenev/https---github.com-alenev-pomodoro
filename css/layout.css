@@ -2104,7 +2104,8 @@ z-index: 999 !important;
 z-index: 99996 !important;
 }
 .ym_my_baloon:hover .placemark,
-.ym_my_baloon.active .placemark  {
+.ym_my_baloon.active .placemark,
+.ym_my_baloon.current .placemark {
     background: url("../i-all/ico-for-map-hover.png") 0 0 no-repeat;
 }
 .label_info {
