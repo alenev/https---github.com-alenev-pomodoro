@@ -1,3 +1,10 @@
+var map_markers = [
+        ['1','50.46395229323288','30.509706499999982','<div class=" contact_big_map--label_line">Адрес 1</div><div class=" contact_big_map--label_line">Телефон 1</div><div class=" contact_big_map--label_line">Время работы 1</div>'],
+        ['2','50.43673679334193','30.500965999999913','<div class=" contact_big_map--label_line">Адрес 2</div><div class=" contact_big_map--label_line">Телефон 2</div><div class=" contact_big_map--label_line">Время работы 2</div>'],
+        ['3','50.364603793487795','30.960714499999995','<div class=" contact_big_map--label_line">Адрес 3</div><div class=" contact_big_map--label_line">Телефон 3</div><div class=" contact_big_map--label_line">Время работы 3</div>'],
+        ['4','50.361535793456035','30.96633849999997','<div class=" contact_big_map--label_line">Адрес 4</div><div class=" contact_big_map--label_line">Телефон 4</div><div class=" contact_big_map--label_line">Время работы 4</div>'],
+];
+
 !function(t){"use strict";var e=function(e,n,a){var r,o=this;e=t(e),n="function"==typeof n?n(e.val(),void 0,e,a):n,o.init=function(){a=a||{},o.byPassKeys=[9,16,17,18,36,37,38,39,40,91],o.translation={0:{pattern:/\d/},9:{pattern:/\d/,optional:!0},"#":{pattern:/\d/,recursive:!0},A:{pattern:/[a-zA-Z0-9]/},S:{pattern:/[a-zA-Z]/}},o.translation=t.extend({},o.translation,a.translation),o=t.extend(!0,{},o,a),e.each(function(){a.maxlength!==!1&&e.attr("maxlength",n.length),e.attr("autocomplete","off"),s.destroyEvents(),s.events(),s.val(s.getMasked())})};var s={getCaret:function(){var t,n=0,a=e.get(0),r=document.selection,o=a.selectionStart;return r&&!~navigator.appVersion.indexOf("MSIE 10")?(a.focus(),t=r.createRange(),t.moveStart("character",-a.value.length),n=t.text.length):(o||"0"===o)&&(n=o),n},setCaret:function(t){var n,a=e.get(0);a.setSelectionRange?(a.focus(),a.setSelectionRange(t,t)):a.createTextRange&&(n=a.createTextRange(),n.collapse(!0),n.moveEnd("character",t),n.moveStart("character",t),n.select())},events:function(){e.bind("keydown.mask",function(){r=s.val()}),e.bind("keyup.mask",s.behaviour),e.bind("paste.mask",function(){setTimeout(function(){e.keydown().keyup()},100)})},destroyEvents:function(){e.unbind("keydown.mask keyup.mask paste.mask")},val:function(t){var n=e.is("input");return arguments.length>0?n?e.val(t):e.text(t):n?e.val():e.text()},behaviour:function(e){e=e||window.event;var n=e.keyCode||e.which;if(-1===t.inArray(n,o.byPassKeys)){var a,r=s.getCaret();r<s.val().length&&(a=!0);var i=s.getMasked();return i!==s.val()&&s.val(i),!a||65===n&&e.ctrlKey||s.setCaret(r),s.callbacks(e)}},getMasked:function(t){var e,r,i=[],c=s.val(),u=0,l=n.length,v=0,f=c.length,h=1,d="push",g=-1;for(a.reverse?(d="unshift",h=-1,e=0,u=l-1,v=f-1,r=function(){return u>-1&&v>-1}):(e=l-1,r=function(){return l>u&&f>v});r();){var m=n.charAt(u),k=c.charAt(v),p=o.translation[m];p?(k.match(p.pattern)?(i[d](k),p.recursive&&(-1===g?g=u:u===e&&(u=g-h),e===g&&(u-=h)),u+=h):p.optional&&(u+=h,v-=h),v+=h):(t||i[d](m),k===m&&(v+=h),u+=h)}var y=n.charAt(e);return l!==f+1||o.translation[y]||i.push(y),i.join("")},callbacks:function(t){var o=s.val(),i=s.val()!==r;i===!0&&"function"==typeof a.onChange&&a.onChange(o,t,e,a),i===!0&&"function"==typeof a.onKeyPress&&a.onKeyPress(o,t,e,a),"function"==typeof a.onComplete&&o.length===n.length&&a.onComplete(o,t,e,a)}};o.remove=function(){s.destroyEvents(),s.val(o.getCleanVal()).removeAttr("maxlength")},o.getCleanVal=function(){return s.getMasked(!0)},o.init()};t.fn.mask=function(n,a){return this.each(function(){t(this).data("mask",new e(this,n,a))})},t.fn.unmask=function(){return this.each(function(){try{t(this).data("mask").remove()}catch(e){}})},t.fn.cleanVal=function(){return t(this).data("mask").getCleanVal()},t("*[data-mask]").each(function(){var e=t(this),n={};"true"===e.attr("data-mask-reverse")&&(n.reverse=!0),"false"===e.attr("data-mask-maxlength")&&(n.maxlength=!1),e.mask(e.attr("data-mask"),n)})}(window.jQuery||window.Zepto);
 
 /* Сброс значение полей по умолчанию расмещенных в value input и в тексте textarea вместо labels. Обязательно использовать для сброса дефолтных значений в value функцию form_inputs_clearing()
@@ -557,7 +564,9 @@ popup.find("#tabs").tabs();
 if (map == "map") {
 var map_container = popup.find(".map_container");
 var mapID = map_container.attr("id");
-ymaps.ready(map1_init(mapID));
+if (mapID == 'map1'){
+ymaps.ready(map_init(mapID, 1));
+}
 }
 }
 
@@ -866,7 +875,7 @@ return new_price;
 
 $(document).ready(function(){
 
-/* Проверка возможности доставки */
+/* Проверка возможности доставки 
 if ($(".delivery_tabs").length > 0){
 var city = $(".header-col1 .geo-city").attr("data-id");
 var delivery = confirm("msg22: Текущий город "+city+". В нем есть доставка?"); 
@@ -951,7 +960,7 @@ $(document).ready(function(){
 //ymaps.ready(map1_init("map1")); формирование карты при загрузке страницы. map1 - id блока карты который должен быть видим на странице (без display: none). Если нужно вызывать в закрытом блоке то этот вызов нужно поместить в callback функции display: block
 });
 
-function map1_init(mapID) {
+function map_init(mapID, factory_selector_button) {
 
 // https://tech.yandex.ru/maps/geocoder/
             // Создание экземпляра карты и его привязка к контейнеру с
@@ -980,10 +989,41 @@ myBalloonContentBodyLayout = ymaps.templateLayoutFactory.createClass(
     });
 	
  
+var factory_selector = '';
+if (factory_selector_button == 1) {
+factory_selector = '<div class="factory_selector"><span>Выбрать пиццерию</span></div>';
+}
 
-/* метка 1 */
-        var baloon1 = ymaps.templateLayoutFactory.createClass(
-            '<div class="baloon_map_tmpl btmpl1"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
+map_markers.forEach(function(item, i, map_markers) {
+
+var lat = '';
+var lng = '';
+var address = '';
+
+item.forEach(function(item2, i2, item) {
+console.log( item2 );
+var w = parseInt(i2);
+
+if (w == 1) {
+lat = item2;
+}
+if (w == 2) {
+lng = item2;
+}
+if (w == 3) {
+address = item2;
+}
+
+});
+/*
+console.log("lat - "+lat+"");
+console.log("lng - "+lng+"");
+console.log("address - "+address+"");
+console.log("factory_selector - "+factory_selector+"");
+console.log("----------------------------------------");
+*/
+window["baloon_" + i] = ymaps.templateLayoutFactory.createClass(
+            '<div class="baloon_map_tmpl btmpl'+i+'"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
                 build: function () {
                     // необходим вызов родительского метода, чтобы добавить содержимое макета в DOM
                     this.constructor.superclass.build.call(this);
@@ -1001,160 +1041,36 @@ myBalloonContentBodyLayout = ymaps.templateLayoutFactory.createClass(
 
                 }
 
-        }); 
-        var baloon1_map_marker = new ymaps.GeoObject({
+});
+
+window["baloon_" + i + "_map_marker"] = new ymaps.GeoObject({
                  geometry: {
                      type: "Point",
-                     coordinates: [50.46395229323288,30.509706499999982]
+                     coordinates: [lat,lng]
                  },
                 properties: {
-                LabelName: 'ym_my_baloon_1', // класс метки в шаблоне метки. data-factory: id пиццерии 
-                balloonContentBody: '<div data-factory="2" class="ym_my_baloon ym_my_baloon_1"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info"><div class=" contact_big_map--label_line">1-я строка адреса</div><div class=" contact_big_map--label_line">2-я строка адреса</div><div class="factory_selector"><span>Выбрать пиццерию</span></div><span class="pmc" "></span></div></div></div>'
+                LabelName: 'ym_my_baloon_'+i+'', // класс метки в шаблоне метки. data-factory: id пиццерии 
+                balloonContentBody: '<div data-factory="2" class="ym_my_baloon ym_my_baloon_'+i+'"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info">'+address+' '+factory_selector+'<span class="pmc" "></span></div></div></div>'
                  }
              }, { 
                  balloonContentBodyLayout: myBalloonContentBodyLayout,
                  balloonContentLayout: myBalloonContentLayout,
-                 iconContentLayout: baloon1,
+                 iconContentLayout: window["baloon_" + i],
                  preset: 'twirl#nightStretchyIcon'
              });
 			 
 //наносим отдельно маркер на карту
-myMap.geoObjects.add(baloon1_map_marker);			 
+myMap.geoObjects.add(window["baloon_" + i + "_map_marker"]);	
 
-/* END метка 1*/
-
-
-/* метка 2 */
-        var baloon2 = ymaps.templateLayoutFactory.createClass(
-            '<div class="baloon_map_tmpl btmpl1"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
-                build: function () {
-                    // необходим вызов родительского метода, чтобы добавить содержимое макета в DOM
-                    this.constructor.superclass.build.call(this);
-          		$(".contact_big_map--label.active").closest(".ymaps-point-overlay").addClass("active");
-				
-                },
-                clear: function () {
-                    $('#layout-element').unbind('mouseover', this.onNameHover);
-                    this.constructor.superclass.clear.call(this);
-                },
-                onNameHover: function () {
-				
-                },
-                ready: function (el) {
-
-                }
-
-        }); 
-        var baloon2_map_marker = new ymaps.GeoObject({
-                 geometry: {
-                     type: "Point",
-                     coordinates: [50.43673679334193,30.500965999999913]
-                 },
-                properties: {
-                LabelName: 'ym_my_baloon_2', // класс метки в шаблоне метки
-                balloonContentBody: '<div data-factory="3" class="ym_my_baloon ym_my_baloon_2"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info"><div class=" contact_big_map--label_line">1-я строка адреса</div><div class=" contact_big_map--label_line">2-я строка адреса</div><div class="factory_selector"><span>Выбрать пиццерию</span></div><span class="pmc"></span></div></div></div>'
-                 }
-             }, { 
-                 balloonContentBodyLayout: myBalloonContentBodyLayout,
-                 balloonContentLayout: myBalloonContentLayout,
-                 iconContentLayout: baloon2,
-                 preset: 'twirl#nightStretchyIcon'
-             });
-			 
-//наносим отдельно маркер на карту
-myMap.geoObjects.add(baloon2_map_marker);
-
-/* END метка 2 */
+// вешаем на каждую метку показ вместо hint нашей label с контактами
+window["baloon_" + i + "_map_marker"].events.add('click', function (e) {
+var label_name = e.get('target').properties.get('LabelName');
+map_labels_toggler(label_name);
+});
+//console.log( i2 + ": " + item2 + "" );
 
 
-
-/* метка 3 */
-        var baloon3 = ymaps.templateLayoutFactory.createClass(
-            '<div class="baloon_map_tmpl btmpl1"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
-                build: function () {
-                    // необходим вызов родительского метода, чтобы добавить содержимое макета в DOM
-                    this.constructor.superclass.build.call(this);
-          		$(".contact_big_map--label.active").closest(".ymaps-point-overlay").addClass("active");
-				
-                },
-                clear: function () {
-                    $('#layout-element').unbind('mouseover', this.onNameHover);
-                    this.constructor.superclass.clear.call(this);
-                },
-                onNameHover: function () {
-				
-                },
-                ready: function (el) {
-
-                }
-
-        }); 
-        var baloon3_map_marker = new ymaps.GeoObject({
-                 geometry: {
-                     type: "Point",
-                     coordinates: [50.364603793487795,30.960714499999995]
-                 },
-                properties: {
-                LabelName: 'ym_my_baloon_3', // класс метки в шаблоне метки
-                balloonContentBody: '<div data-factory="4" class="ym_my_baloon ym_my_baloon_3"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info"><div class=" contact_big_map--label_line">1-я строка адреса</div><div class=" contact_big_map--label_line">2-я строка адреса</div><div class="factory_selector"><span>Выбрать пиццерию</span></div><span class="pmc"></span></div></div></div>'
-                 }
-             }, { 
-                 balloonContentBodyLayout: myBalloonContentBodyLayout,
-                 balloonContentLayout: myBalloonContentLayout,
-                 iconContentLayout: baloon3,
-                 preset: 'twirl#nightStretchyIcon'
-             });
-			 
-
-//наносим отдельно маркер на карту
-myMap.geoObjects.add(baloon3_map_marker);			 
-
-/* END метка 3 */
-
-
-
-/* метка 4 */
-        var baloon4 = ymaps.templateLayoutFactory.createClass(
-            '<div class="baloon_map_tmpl btmpl1"><h3>$[properties.name]</h3><div>$[properties.balloonContentBody]</div></div>', {
-                build: function () {
-                    // необходим вызов родительского метода, чтобы добавить содержимое макета в DOM
-                    this.constructor.superclass.build.call(this);
-          		$(".contact_big_map--label.active").closest(".ymaps-point-overlay").addClass("active");
-				
-                },
-                clear: function () {
-                    $('#layout-element').unbind('mouseover', this.onNameHover);
-                    this.constructor.superclass.clear.call(this);
-                },
-                onNameHover: function () {
-				
-                },
-                ready: function (el) {
-
-                }
-
-        }); 
-        var baloon4_map_marker = new ymaps.GeoObject({
-                 geometry: {
-                     type: "Point",
-                     coordinates: [50.361535793456035,30.96633849999997]
-                 },
-                properties: {
-                LabelName: 'ym_my_baloon_4', // класс метки в шаблоне метки
-                balloonContentBody: '<div data-factory="5" class="ym_my_baloon ym_my_baloon_4"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info"><div class=" contact_big_map--label_line">1-я строка адреса</div><div class=" contact_big_map--label_line">2-я строка адреса</div><div class="factory_selector"><span>Выбрать пиццерию</span></div><span class="pmc"></span></div></div></div>'
-                 }
-             }, { 
-                 balloonContentBodyLayout: myBalloonContentBodyLayout,
-                 balloonContentLayout: myBalloonContentLayout,
-                 iconContentLayout: baloon4,
-                 preset: 'twirl#nightStretchyIcon'
-             });
-			 
-//наносим отдельно маркер на карту
-myMap.geoObjects.add(baloon4_map_marker);
-
-/* END метка 4 */
-
+});
 
 
 
@@ -1164,27 +1080,12 @@ myMap.controls.add(
 );
 
 
-
-
 // отключаем стандартные hint маркеров
 myMap.geoObjects.options.set({
     showHintOnHover: false,
     openBalloonOnClick: false
 });
 
-// вешаем на каждую метку показ вместо hint нашей label с контактами
-baloon1_map_marker.events.add('click', function (e) {
-var label_name = e.get('target').properties.get('LabelName');
-console.log("label - "+label_name+"");
-map_labels_toggler(label_name);
-});
-
-// вешаем на каждую метку показ вместо hint нашей label с контактами
-baloon2_map_marker.events.add('click', function (e) {
-var label_name = e.get('target').properties.get('LabelName');
-console.log("label - "+label_name+"");
-map_labels_toggler(label_name);
-});
 
 var placesPane = myMap.panes.get('places').getElement();
 $(placesPane).addClass('places_wrap');
@@ -1306,5 +1207,4 @@ form.closest("form").find(".fm-no.factory").hide();
 /* END form-samovivoz */
 
 });
-
 
