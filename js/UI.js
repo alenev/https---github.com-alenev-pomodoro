@@ -602,12 +602,26 @@ popup_show(popup_id);
 
 
 $(".pomodoro-region-list a").on('click',function(){
+
+
+
 var city = $(this).text(); 
 var region = $(this).attr("data-region");
 var city_id = $(this).attr("data-id"); 
 var lat = $(this).attr("data-lat");
 var lng = $(this).attr("data-lng");
+var zoom = $(this).attr("data-zoom");
 
+if ($(".pomodoro-list-region2").length > 0){
+window.mcct2lat = lat;
+window.mcct2lng = lng;
+window.mcct2zoom = zoom;
+$(".region-active").removeClass("region-active");
+$(this).addClass("region-active");
+$("#map2").html("");
+ymaps.ready(map_init('map2', 0, 'city_change_type2'));
+$(".ui-tabs-nav li:first a").click();
+}else{
 $(".geo-city").each(function(){
 $(this).text(city);
 $(this).attr("data-id", city); 
@@ -637,6 +651,7 @@ change_city_mode = 2; // Перезагружаем страницу и выво
 $.cookie('change_city_mode', ''+change_city_mode+'', { expires: 31 });
 var href = document.location.href;
 document.location.href = href;
+}
 });
 
 
@@ -972,15 +987,19 @@ ymaps.ready(map_init('map2', 0));
 }
 });
 
-function map_init(mapID, factory_selector_button) {
+function map_init(mapID, factory_selector_button, event) {
 
 return function () {
 
-console.log("map_init");
+if (event == 'city_change_type2'){
+var lat = window.mcct2lat;
+var lng = window.mcct2lng;
+var mzoom = window.mcct2zoom;
+}else{
 var lat = $(".header-geo .geo-city").attr("data-lat");
 var lng = $(".header-geo .geo-city").attr("data-lng");
 var mzoom = $(".header-geo .geo-city").attr("data-zoom");
-
+}
 // https://tech.yandex.ru/maps/geocoder/
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
