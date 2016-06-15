@@ -731,12 +731,7 @@ $(document).ready(function () {
         var lng = $(this).attr("data-lng");
         var zoom = $(this).attr("data-zoom");
 
-        var nopr = $(this).prev(".pomodoro-region-list");
-        if (nopr.length > 0) {
-            alert("nopr");
-        }
-
-        if ($(".pomodoro-list-region2").length > 0) {
+        if ($(this).hasClass("city_change_type2")) {	
             window.mcct2lat = lat;
             window.mcct2lng = lng;
             window.mcct2zoom = zoom;
