@@ -1106,7 +1106,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     if ($('#map2').length > 0) {
-        ymaps.ready(map_init('map2', 0));
+         ymaps.ready(map_init('map2', 0, 'map_init'));
     }
 });
 
@@ -1182,7 +1182,7 @@ function map_init(mapID, factory_selector_button, event) {
                     current = item2;
                 }
 
-                if (current == 'current') {
+                if (current == 'current' & event != 'map_init') {
                     current_class = 'current';
                 }
 
