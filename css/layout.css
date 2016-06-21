@@ -2103,10 +2103,21 @@ z-index: 999 !important;
 .places_wrap.open {
 z-index: 99996 !important;
 }
+.places_wrap.open .ym_my_baloon {
+z-index: 99998 !important;
+}
 .ym_my_baloon:hover .placemark,
 .ym_my_baloon.active .placemark,
 .ym_my_baloon.current .placemark {
     background: url("../i-all/ico-for-map-hover.png") 0 0 no-repeat;
+}
+.places_wrap.open .ym_my_baloon:hover .placemark,
+.places_wrap.open .ym_my_baloon.active .placemark,
+.places_wrap.open .ym_my_baloon.current .placemark {
+   background:  url("../i-all/ico-for-map.png") no-repeat 0 0 !important;
+}
+.places_wrap ymaps {
+background:  none !important;
 }
 .label_info {
 text-align: left;
@@ -2188,8 +2199,12 @@ border: 2px solid #ccc;
 .ym_my_baloon.current .factory_selector {
 display: none;
 }	
-	
-	
+.places_wrap.open .overlay {
+z-index: 1 !important;
+}		
+.places_wrap.open .active_overlay {
+z-index: 99991 !important;
+}	
 	
 	
 	
