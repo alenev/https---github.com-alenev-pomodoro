@@ -1217,7 +1217,7 @@ function map_init(mapID, factory_selector_button, event) {
                 },
                 properties: {
                     LabelName: 'ym_my_baloon_' + i + '', // класс метки в шаблоне метки. data-factory: id пиццерии 
-                    balloonContentBody: '<div data-factory="' + id + '" class="ym_my_baloon ym_my_baloon_' + i + ' ' + current_class + '"><div class="contact_big_map--label"><div class="label_info">' + address + ' ' + factory_selector + '<span class="pmc" "></span></div></div><div class="placemark"></div></div>'
+                    balloonContentBody: '<div data-factory="' + id + '" class="ym_my_baloon ym_my_baloon_' + i + ' ' + current_class + '"><div class="placemark"></div><div class="contact_big_map--label"><div class="label_info">' + address + ' ' + factory_selector + '<span class="pmc" "></span></div></div></div>'
                 }
             }, {
 			    iconImageHref: 'http://paintnet.ru/wp-content/uploads/2009/05/checkerboard.png',
@@ -1226,6 +1226,7 @@ function map_init(mapID, factory_selector_button, event) {
                 balloonContentBodyLayout: myBalloonContentBodyLayout,
                 balloonContentLayout: myBalloonContentLayout,
                 iconContentLayout: window["baloon_" + i],
+				pane: 'overlaps'
                
             });
 
@@ -1235,9 +1236,9 @@ function map_init(mapID, factory_selector_button, event) {
             // вешаем на каждую метку показ вместо hint нашей label с контактами
             window["baloon_" + i + "_map_marker"].events.add('click', function (e) {
                 var label_name = e.get('target').properties.get('LabelName');
+				console.log("click");
                 map_labels_toggler(label_name);
             });
-            //console.log( i2 + ": " + item2 + "" );
 
 
         });
@@ -1255,23 +1256,25 @@ function map_init(mapID, factory_selector_button, event) {
             openBalloonOnClick: false
         });
 
-
-        var placesPane = myMap.panes.get('places').getElement();
-        $(placesPane).addClass('places_wrap');		
+       // var placesPane = myMap.panes.get('places').getElement();
+       // $(placesPane).addClass('places_wrap');	
+	   
+	    var overlaps = myMap.panes.get('overlaps').getElement();
+        $(overlaps).addClass('places_wrap');	
+	   
     }
 
 }
 
 // открытие балуна
 function map_labels_toggler(label_name) {
-    var label = $("." + label_name + "");
-	
+    var label = $("." + label_name + "");	
 	$(".places_wrap").find("ymaps[class*='overlay']").each(function(){
 	    if (!$(this).hasClass("overlay")) {
 		$(this).addClass("overlay");
 		}
 	});
-		
+	$(".ym_my_baloon.active").removeClass("active");	
     if (label.hasClass("active")) {
         label.removeClass("active");
         label.closest(".places_wrap").removeClass("open");
@@ -1289,25 +1292,46 @@ label.closest(".places_wrap").removeClass("open");
 }
 
 $(document).ready(function () {
+
+
+
+    $(".contact_big_map--label").mouseenter(function() {
+    $(".places_wrap").addClass("label_focused");
+    }).mouseleave(function() {
+    $(".places_wrap").removeClass("label_focused");
+    });
+	
     $("body").on('click', '.ym_my_baloon .pmc', function () {
     map_label_close($(this));  
     });
 
     $("body").on('click', '.factory_selector', function () {
-        if ($(this).hasClass("list")) {
-            var factory_id = $(this).attr("data-factory");
-        } else {
-            var factory_id = $(this).closest(".ym_my_baloon").attr("data-factory");
-            $(".places_wrap .ym_my_baloon").each(function () {
+	
+	 $(".places_wrap .ym_my_baloon").each(function () {
                 if ($(this).hasClass("current")) {
                     $(this).removeClass("current");
                 }
-            })
-            $(this).closest(".ym_my_baloon").removeClass("active");
+            });
+			
+        if ($(this).hasClass("list")) {
+            var factory_id = $(this).attr("data-factory");
+			$(".places_wrap .ym_my_baloon").each(function () {
+			var tfi = parseInt($(this).attr("data-factory"));
+			if (tfi == factory_id) {
+            $(this).addClass("current");
+			}
+			});
+        } else {
+            var factory_id = $(this).closest(".ym_my_baloon").attr("data-factory");
+			$(this).closest(".ym_my_baloon").removeClass("active");
             $(this).closest(".ym_my_baloon").addClass("current");
             $(this).closest(".places_wrap").removeClass("open");
+		}
+		
+           
+           
 
-        }
+       
         popup_hide();
         $(".pizza_factory_adress").text(factory_id);
         $(".factory_choice_wrap").addClass("hide");

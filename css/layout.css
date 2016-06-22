@@ -2039,6 +2039,7 @@ z-index: 999;
 .delivery_message {
 display: none;
 }
+
 .ym_my_baloon {
 width: 20px;
 height: 20px;
@@ -2080,40 +2081,19 @@ background: #ccc;
     left: -5px;
     position: absolute;
     top: -35px;
-    width: 30px;
-z-index: 99998 !important;	
-}
-.ym_my_baloon {
-z-index: 99998 !important;	
+    width: 30px;	
 }
 .ym_my_baloon  .contact_big_map--label {
 display: none;
-z-index: 99999 !important;
 } 
-
-.ymaps-2-1-39-places-pane {
-z-index: 999 !important;
-}
-.ymaps-2-1-39-places-pane.open {
-z-index: 99996 !important;
-}
-.places_wrap {
-z-index: 999 !important;
-}
-.places_wrap.open {
-z-index: 99996 !important;
-}
-.places_wrap.open .ym_my_baloon {
-z-index: 99998 !important;
-}
 .ym_my_baloon:hover .placemark,
 .ym_my_baloon.active .placemark,
 .ym_my_baloon.current .placemark {
     background: url("../i-all/ico-for-map-hover.png") 0 0 no-repeat;
 }
-.places_wrap.open .ym_my_baloon:hover .placemark,
-.places_wrap.open .ym_my_baloon.active .placemark,
-.places_wrap.open .ym_my_baloon.current .placemark {
+#map2 .places_wrap.open .ym_my_baloon:hover .placemark,
+#map2 .places_wrap.open .ym_my_baloon.active .placemark,
+#map2 .places_wrap.open .ym_my_baloon.current .placemark {
    background:  url("../i-all/ico-for-map.png") no-repeat 0 0 !important;
 }
 .places_wrap ymaps {
@@ -2154,6 +2134,44 @@ cursor: pointer;
 float: left;
 position: relative;	
 }
+.ym_my_baloon.current .factory_selector {
+display: none;
+}	
+
+.places_wrap.open .overlay {
+z-index: 1 !important;
+}		
+.places_wrap.open .active_overlay {
+z-index: 99991 !important;
+}	
+
+.ym_my_baloon .placemark,
+.ym_my_baloon {
+ z-index: 99998 !important;
+}
+.ym_my_baloon  .contact_big_map--label {
+z-index: 99999 !important;
+} 
+.ymaps-2-1-39-places-pane {
+z-index: 999 !important;
+}
+.ymaps-2-1-39-places-pane.open {
+z-index: 99996 !important;
+}
+
+/*
+.places_wrap {
+z-index: 2498 !important;
+}
+.places_wrap.open {
+z-index: 2500 !important;
+}
+*/
+
+
+
+
+
 .asvpopup-tabs-holder {
 overflow: hidden;
 }
@@ -2168,8 +2186,9 @@ cursor: pointer;
 position: absolute;
 right: -5px;
 top: -5px;
-z-index: 99999;
+/* z-index: 99999; */
 }
+
 .form-universal .fm-yes,
 .form-universal .fm-no,
 .form-quolity .fm-yes,
@@ -2196,20 +2215,10 @@ border-radius: 50px;
 background: #fff;
 border: 2px solid #ccc;
 }
-.ym_my_baloon.current .factory_selector {
-display: none;
-}	
-.places_wrap.open .overlay {
-z-index: 1 !important;
-}		
-.places_wrap.open .active_overlay {
-z-index: 99991 !important;
-}	
-	
-	
-	
-	
-	
+
+
+
+
 	
 	
 	
