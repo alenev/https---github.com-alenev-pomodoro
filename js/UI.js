@@ -5,6 +5,9 @@ var map_markers = [
         ['4', '50.51225596356366', '30.800765000000016', '<div class=" contact_big_map--label_line">Адрес 4</div><div class=" contact_big_map--label_line">Телефон 4</div><div class=" contact_big_map--label_line">Время работы 4</div>'],
 ];
 
+var action_countdown_date_current = 'Wed Jun 22 2016 01:19:41 GMT+0300';
+var action_countdown_date_finish = 'Wed Jun 30 2016 18:19:41 GMT+0300';
+
 ! function (t) {
     "use strict";
     var e = function (e, n, a) {
@@ -1414,6 +1417,48 @@ $(document).ready(function () {
         }
     });
     /* END form-samovivoz */
-var date = new Date();
-console.log("date - "+date+"");
+
 });
+
+/* countdown*/
+function getTimeRemaining(starttime,endtime){
+  var t = endtime - starttime;
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function CountDown(clock, starttime, endtime){
+  var timecount = starttime;
+  var timeinterval = setInterval(function(){   
+    var t = getTimeRemaining(timecount, endtime);
+	
+	clock.find("span:eq(0)").text(t.days);
+	clock.find("span:eq(1)").text(t.hours);
+	clock.find("span:eq(2)").text(t.minutes);
+	clock.find("span:eq(3)").text(t.seconds);
+	  
+    if(t.total<=0){
+      clearInterval(timeinterval);	  
+    }
+	timecount = timecount + 1000;
+  },1000);
+}
+
+$(document).ready(function () {
+CountDown($(".lovi-timeout-date"), Date.parse(action_countdown_date_current), Date.parse(action_countdown_date_finish));
+  
+});
+
+
+/* END countdown*/
+
