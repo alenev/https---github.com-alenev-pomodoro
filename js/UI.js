@@ -1261,8 +1261,8 @@ function map_init(mapID, factory_selector_button, event) {
 	   
 	    var overlaps = myMap.panes.get('overlaps').getElement();
         $(overlaps).addClass('places_wrap');	
-	   
-    }
+   
+	}
 
 }
 
@@ -1295,11 +1295,6 @@ $(document).ready(function () {
 
 
 
-    $(".contact_big_map--label").mouseenter(function() {
-    $(".places_wrap").addClass("label_focused");
-    }).mouseleave(function() {
-    $(".places_wrap").removeClass("label_focused");
-    });
 	
     $("body").on('click', '.ym_my_baloon .pmc', function () {
     map_label_close($(this));  
@@ -1419,5 +1414,6 @@ $(document).ready(function () {
         }
     });
     /* END form-samovivoz */
-
+var date = new Date();
+console.log("date - "+date+"");
 });
