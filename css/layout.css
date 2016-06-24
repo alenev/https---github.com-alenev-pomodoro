@@ -2033,7 +2033,7 @@ a.ia-middle:hover .ia-desc {
 }
 #beaverslider a {
 position: relative;
-z-index: 100;
+z-index: 101;
 }
 #cart_empty,
 .delivery_message {
