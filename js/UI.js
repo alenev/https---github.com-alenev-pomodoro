@@ -1280,11 +1280,11 @@ function map_labels_toggler(label_name) {
 	$(".ym_my_baloon.active").removeClass("active");	
     if (label.hasClass("active")) {
         label.removeClass("active");
-        label.closest(".places_wrap").removeClass("open");
-		label.closest("ymaps[class*='overlay']").removeClass("active_overlay");
+        label.closest(".places_wrap").removeClass("open");		
     } else {	
         label.closest(".places_wrap").addClass("open");
         label.addClass("active");
+		$(".active_overlay").removeClass("active_overlay");
 		label.closest("ymaps[class*='overlay']").addClass("active_overlay");
     }
 }
