@@ -1185,7 +1185,7 @@ function map_init(mapID, factory_selector_button, event) {
                     current = item2;
                 }
 
-                if (current == 'current' & event != 'map_init') {
+                if (current == 'current') {
                     current_class = 'current';
                 }
 
