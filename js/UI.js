@@ -533,9 +533,7 @@ $(document).ready(function () {
 
 
 
-    if ($("#popup3").length > 0) {
-        popup_hide();
-    }
+
 
     $(".form-tocart").each(function () {
         $(this).find(".tocart-up").removeAttr("href");
@@ -780,6 +778,7 @@ $(document).ready(function () {
 
 
     var change_city_mode = parseInt($.cookie('change_city_mode'));
+	console.log("change_city_mode - "+change_city_mode+"");
     if (change_city_mode != 0) {
         var popup_id = "popup6";
         popup_show(popup_id);
