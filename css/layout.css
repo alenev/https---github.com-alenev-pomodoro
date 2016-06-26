@@ -2094,7 +2094,7 @@ display: none;
 #map2 .places_wrap.open .ym_my_baloon:hover .placemark,
 #map2 .places_wrap.open .ym_my_baloon.active .placemark,
 #map2 .places_wrap.open .ym_my_baloon.current .placemark {
-   background:  url("../i-all/ico-for-map.png") no-repeat 0 0 !important;
+   background:  url("../i-all/ico-for-map-hover.png") no-repeat 0 0 !important;
 }
 .places_wrap ymaps {
 background:  none !important;
