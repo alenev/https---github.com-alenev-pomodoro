@@ -1456,6 +1456,13 @@ function CountDown(clock, starttime, endtime){
 $(document).ready(function () {
 CountDown($(".lovi-timeout-date"), Date.parse(action_countdown_date_current), Date.parse(action_countdown_date_finish));
 popup_hide();
+
+$("body").on('click', '.to1tab', function () {
+$(".ui-tabs-nav li:eq(0) a").click();
+});
+$("body").on('click', '.to2tab', function () {
+$(".ui-tabs-nav li:eq(1) a").click();
+});
 });
 
 
