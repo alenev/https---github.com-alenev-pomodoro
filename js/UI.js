@@ -607,7 +607,8 @@ $(document).ready(function () {
         }
     });
 
-    $(".asvpopup-body .button-close").on('click', function () {
+    $(".asvpopup-body .button-close, .modal-close").on('click', function () {
+	console.log("hide");
         popup_hide();
     });
 
@@ -656,7 +657,6 @@ function basket_discount_update() {
         basket_discount_summ = NumFormat(basket_discount_summ, "add_space");
         $("#cart_total_block .ds").text(basket_discount_summ);
     }
-    console.log("bdu");
 }
 
 
@@ -1455,7 +1455,7 @@ function CountDown(clock, starttime, endtime){
 
 $(document).ready(function () {
 CountDown($(".lovi-timeout-date"), Date.parse(action_countdown_date_current), Date.parse(action_countdown_date_finish));
-  
+popup_hide();
 });
 
 
